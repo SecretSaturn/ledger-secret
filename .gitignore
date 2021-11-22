@@ -96,4 +96,5 @@ fuzz-*.log
 
 .vscode/
 
+# macOS files
 .DS_Store
