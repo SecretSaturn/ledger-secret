@@ -104,7 +104,7 @@
         {
           "inputs": [
             {
-              "address": "cosmosaccaddr1d9h8qat5e4ehc5",
+              "address": "secretaccaddr1d9h8qat5e4ehc5",
               "coins": [
                 {
                   "amount": "10",
@@ -115,7 +115,7 @@
           ],
           "outputs": [
             {
-              "address": "cosmosaccaddr1da6hgur4wse3jx32",
+              "address": "secretaccaddr1da6hgur4wse3jx32",
               "coins": [
                 {
                   "amount": "10",
@@ -134,9 +134,9 @@
       "0 | Chain ID : secret-4",
       "1 | Account : 0",
       "2 | Sequence : 1",
-      "3 | Source Address : cosmosaccaddr1d9h8qat5e4ehc5",
+      "3 | Source Address : secretaccaddr1d9h8qat5e4ehc5",
       "4 | Source Coins : 10 scrt",
-      "5 | Dest Address : cosmosaccaddr1da6hgur4wse3jx32",
+      "5 | Dest Address : secretaccaddr1da6hgur4wse3jx32",
       "6 | Dest Coins : 10 scrt",
       "7 | Memo : testmemo",
       "8 | Fee : 5 photon",
@@ -163,7 +163,7 @@
         {
           "inputs": [
             {
-              "address": "cosmosaccaddr1d9h8qat5e4ehc5",
+              "address": "secretaccaddr1d9h8qat5e4ehc5",
               "coins": [
                 {
                   "amount": "10",
@@ -174,7 +174,7 @@
           ],
           "outputs": [
             {
-              "address": "cosmosaccaddr1da6hgur4wse3jx32",
+              "address": "secretaccaddr1da6hgur4wse3jx32",
               "coins": [
                 {
                   "amount": "10",
@@ -190,9 +190,9 @@
     "parsingErr": "No error",
     "validationErr": "No error",
     "expected": [
-      "0 | Source Address : cosmosaccaddr1d9h8qat5e4ehc5",
+      "0 | Source Address : secretaccaddr1d9h8qat5e4ehc5",
       "1 | Source Coins : 10 scrt",
-      "2 | Dest Address : cosmosaccaddr1da6hgur4wse3jx32",
+      "2 | Dest Address : secretaccaddr1da6hgur4wse3jx32",
       "3 | Dest Coins : 10 scrt",
       "4 | Memo : testmemo",
       "5 | Fee : 5 photon"
@@ -217,7 +217,7 @@
         {
           "inputs": [
             {
-              "address": "cosmosaccaddr1d9h8qat5e4ehc5",
+              "address": "secretaccaddr1d9h8qat5e4ehc5",
               "coins": [
                 {
                   "amount": "10",
@@ -228,7 +228,7 @@
           ],
           "outputs": [
             {
-              "address": "cosmosaccaddr1da6hgur4wse3jx32",
+              "address": "secretaccaddr1da6hgur4wse3jx32",
               "coins": [
                 {
                   "amount": "10",
@@ -247,9 +247,9 @@
       "0 | Chain ID : test-chain-1",
       "1 | Account : 0",
       "2 | Sequence : 1",
-      "3 | Source Address : cosmosaccaddr1d9h8qat5e4ehc5",
+      "3 | Source Address : secretaccaddr1d9h8qat5e4ehc5",
       "4 | Source Coins : 10 scrt",
-      "5 | Dest Address : cosmosaccaddr1da6hgur4wse3jx32",
+      "5 | Dest Address : secretaccaddr1da6hgur4wse3jx32",
       "6 | Dest Coins : 10 scrt",
       "7 | Fee : 5 photon",
       "8 | Gas : 10000"
@@ -274,7 +274,7 @@
         {
           "inputs": [
             {
-              "address": "cosmosaccaddr1d9h8qat5e4ehc5",
+              "address": "secretaccaddr1d9h8qat5e4ehc5",
               "coins": [
                 {
                   "amount": "10",
@@ -285,7 +285,7 @@
           ],
           "outputs": [
             {
-              "address": "cosmosaccaddr1da6hgur4wse3jx32",
+              "address": "secretaccaddr1da6hgur4wse3jx32",
               "coins": [
                 {
                   "amount": "10",
@@ -301,9 +301,9 @@
     "parsingErr": "No error",
     "validationErr": "JSON Missing memo",
     "expected": [
-      "0 | Source Address : cosmosaccaddr1d9h8qat5e4ehc5",
+      "0 | Source Address : secretaccaddr1d9h8qat5e4ehc5",
       "1 | Source Coins : 10 scrt",
-      "2 | Dest Address : cosmosaccaddr1da6hgur4wse3jx32",
+      "2 | Dest Address : secretaccaddr1da6hgur4wse3jx32",
       "3 | Dest Coins : 10 scrt",
       "4 | Fee : 5 photon"
     ],
@@ -328,7 +328,7 @@
         {
           "inputs": [
             {
-              "address": "cosmosaccaddr1d9h8qat5e4ehc5",
+              "address": "secretaccaddr1d9h8qat5e4ehc5",
               "coins": [
                 {
                   "amount": "10",
@@ -339,7 +339,7 @@
           ],
           "outputs": [
             {
-              "address": "cosmosaccaddr1da6hgur4wse3jx32",
+              "address": "secretaccaddr1da6hgur4wse3jx32",
               "coins": [
                 {
                   "amount": "10",
@@ -358,9 +358,9 @@
       "0 | Chain ID : test-chain-1",
       "1 | Account : 0",
       "2 | Sequence : 1",
-      "3 | Source Address : cosmosaccaddr1d9h8qat5e4ehc5",
+      "3 | Source Address : secretaccaddr1d9h8qat5e4ehc5",
       "4 | Source Coins : 10 scrt",
-      "5 | Dest Address : cosmosaccaddr1da6hgur4wse3jx32",
+      "5 | Dest Address : secretaccaddr1da6hgur4wse3jx32",
       "6 | Dest Coins : 10 scrt",
       "7 | Fee : 5 photon",
       "8 | Gas : 10000"
@@ -386,7 +386,7 @@
         {
           "inputs": [
             {
-              "address": "cosmosaccaddr1d9h8qat5e4ehc5",
+              "address": "secretaccaddr1d9h8qat5e4ehc5",
               "coins": [
                 {
                   "amount": "10",
@@ -397,7 +397,7 @@
           ],
           "outputs": [
             {
-              "address": "cosmosaccaddr1da6hgur4wse3jx32",
+              "address": "secretaccaddr1da6hgur4wse3jx32",
               "coins": [
                 {
                   "amount": "10",
@@ -413,9 +413,9 @@
     "parsingErr": "No error",
     "validationErr": "No error",
     "expected": [
-      "0 | Source Address : cosmosaccaddr1d9h8qat5e4ehc5",
+      "0 | Source Address : secretaccaddr1d9h8qat5e4ehc5",
       "1 | Source Coins : 10 scrt",
-      "2 | Dest Address : cosmosaccaddr1da6hgur4wse3jx32",
+      "2 | Dest Address : secretaccaddr1da6hgur4wse3jx32",
       "3 | Dest Coins : 10 scrt",
       "4 | Fee : 5 photon"
     ],
@@ -440,7 +440,7 @@
         {
           "inputs": [
             {
-              "address": "cosmosaccaddr1d9h8qat5e4ehc5",
+              "address": "secretaccaddr1d9h8qat5e4ehc5",
               "coins": [
                 {
                   "amount": "10",
@@ -451,7 +451,7 @@
           ],
           "outputs": [
             {
-              "address": "cosmosaccaddr1da6hgur4wse3jx32",
+              "address": "secretaccaddr1da6hgur4wse3jx32",
               "coins": [
                 {
                   "amount": "10",
@@ -494,9 +494,9 @@
       "0 | Chain ID : test-chain-1",
       "1 | Account : 0",
       "2 | Sequence : 1",
-      "3 | Source Address : cosmosaccaddr1d9h8qat5e4ehc5",
+      "3 | Source Address : secretaccaddr1d9h8qat5e4ehc5",
       "4 | Source Coins : 10 scrt",
-      "5 | Dest Address : cosmosaccaddr1da6hgur4wse3jx32",
+      "5 | Dest Address : secretaccaddr1da6hgur4wse3jx32",
       "6 | Dest Coins : 10 scrt",
       "7 | Source Address : test2",
       "8 | Source Coins : 20 bitcoin",
@@ -527,7 +527,7 @@
         {
           "inputs": [
             {
-              "address": "cosmosaccaddr1d9h8qat5e4ehc5",
+              "address": "secretaccaddr1d9h8qat5e4ehc5",
               "coins": [
                 {
                   "amount": "10",
@@ -538,7 +538,7 @@
           ],
           "outputs": [
             {
-              "address": "cosmosaccaddr1da6hgur4wse3jx32",
+              "address": "secretaccaddr1da6hgur4wse3jx32",
               "coins": [
                 {
                   "amount": "10",
@@ -578,9 +578,9 @@
     "parsingErr": "No error",
     "validationErr": "No error",
     "expected": [
-      "0 | Source Address : cosmosaccaddr1d9h8qat5e4ehc5",
+      "0 | Source Address : secretaccaddr1d9h8qat5e4ehc5",
       "1 | Source Coins : 10 scrt",
-      "2 | Dest Address : cosmosaccaddr1da6hgur4wse3jx32",
+      "2 | Dest Address : secretaccaddr1da6hgur4wse3jx32",
       "3 | Dest Coins : 10 scrt",
       "4 | Source Address : test2",
       "5 | Source Coins : 20 bitcoin",
@@ -614,8 +614,8 @@
               "amount": "1000000",
               "denom": "uscrt"
             },
-            "delegator_address": "cosmos102hty0jv2s29lyc4u0tv97z9v298e24t3vwtpl",
-            "validator_address": "cosmosvaloper1grgelyng2v6v3t8z87wu3sxgt9m5s03xfytvz7"
+            "delegator_address": "secret102hty0jv2s29lyc4u0tv97z9v298e24t3vwtpl",
+            "validator_address": "secretvaloper1grgelyng2v6v3t8z87wu3sxgt9m5s03xfytvz7"
           }
         }
       ],
@@ -629,9 +629,9 @@
       "2 | Sequence : 1",
       "3 | Type : Delegate",
       "4 | Amount : 1000000 uscrt",
-      "5 | Delegator [1/2] : cosmos102hty0jv2s29lyc4u0tv97z9v298e24t",
+      "5 | Delegator [1/2] : secret102hty0jv2s29lyc4u0tv97z9v298e24t",
       "5 | Delegator [2/2] : 3vwtpl",
-      "6 | Validator [1/2] : cosmosvaloper1grgelyng2v6v3t8z87wu3sxgt",
+      "6 | Validator [1/2] : secretvaloper1grgelyng2v6v3t8z87wu3sxgt",
       "6 | Validator [2/2] : 9m5s03xfytvz7",
       "7 | Memo : Zondax.ch",
       "8 | Fee : 5000 uscrt",
@@ -662,8 +662,8 @@
               "amount": "1000000",
               "denom": "uscrt"
             },
-            "delegator_address": "cosmos102hty0jv2s29lyc4u0tv97z9v298e24t3vwtpl",
-            "validator_address": "cosmosvaloper1grgelyng2v6v3t8z87wu3sxgt9m5s03xfytvz7"
+            "delegator_address": "secret102hty0jv2s29lyc4u0tv97z9v298e24t3vwtpl",
+            "validator_address": "secretvaloper1grgelyng2v6v3t8z87wu3sxgt9m5s03xfytvz7"
           }
         }
       ],
@@ -677,9 +677,9 @@
       "2 | Sequence : 1",
       "3 | Type : Delegate",
       "4 | Amount : 1000000 uscrt",
-      "5 | Delegator [1/2] : cosmos102hty0jv2s29lyc4u0tv97z9v298e24t",
+      "5 | Delegator [1/2] : secret102hty0jv2s29lyc4u0tv97z9v298e24t",
       "5 | Delegator [2/2] : 3vwtpl",
-      "6 | Validator [1/2] : cosmosvaloper1grgelyng2v6v3t8z87wu3sxgt",
+      "6 | Validator [1/2] : secretvaloper1grgelyng2v6v3t8z87wu3sxgt",
       "6 | Validator [2/2] : 9m5s03xfytvz7",
       "7 | Memo : Zondax.ch",
       "8 | Fee : 5000 uscrt",
@@ -710,8 +710,8 @@
               "amount": "1000000",
               "denom": "uscrt"
             },
-            "delegator_address": "cosmos102hty0jv2s29lyc4u0tv97z9v298e24t3vwtpl",
-            "validator_address": "cosmosvaloper1grgelyng2v6v3t8z87wu3sxgt9m5s03xfytvz7"
+            "delegator_address": "secret102hty0jv2s29lyc4u0tv97z9v298e24t3vwtpl",
+            "validator_address": "secretvaloper1grgelyng2v6v3t8z87wu3sxgt9m5s03xfytvz7"
           }
         }
       ],
@@ -722,9 +722,9 @@
     "expected": [
       "0 | Type : Delegate",
       "1 | Amount : 1.000000 SCRT",
-      "2 | Delegator [1/2] : cosmos102hty0jv2s29lyc4u0tv97z9v298e24t",
+      "2 | Delegator [1/2] : secret102hty0jv2s29lyc4u0tv97z9v298e24t",
       "2 | Delegator [2/2] : 3vwtpl",
-      "3 | Validator [1/2] : cosmosvaloper1grgelyng2v6v3t8z87wu3sxgt",
+      "3 | Validator [1/2] : secretvaloper1grgelyng2v6v3t8z87wu3sxgt",
       "3 | Validator [2/2] : 9m5s03xfytvz7",
       "4 | Memo : Zondax.ch",
       "5 | Fee : 0.005000 SCRT"
@@ -751,7 +751,7 @@
             }
           ],
           "proposal_type": "Text",
-          "proposer": "cosmos101234567890abcdefghijklmnopqrstuvwxyz0",
+          "proposer": "secret101234567890abcdefghijklmnopqrstuvwxyz0",
           "title": "test"
         }
       ],
@@ -767,7 +767,7 @@
       "4 | msgs/initial_deposit/amount : 1",
       "5 | msgs/initial_deposit/denom : stake",
       "6 | msgs/proposal_type : Text",
-      "7 | msgs/proposer [1/2] : cosmos101234567890abcdefghijklmnopqrstu",
+      "7 | msgs/proposer [1/2] : secret101234567890abcdefghijklmnopqrstu",
       "7 | msgs/proposer [2/2] : vwxyz0",
       "8 | msgs/title : test",
       "9 | Memo : abc",
@@ -796,7 +796,7 @@
             }
           ],
           "proposal_type": "Text",
-          "proposer": "cosmos101234567890abcdefghijklmnopqrstuvwxyz0",
+          "proposer": "secret101234567890abcdefghijklmnopqrstuvwxyz0",
           "title": "test"
         }
       ],
@@ -809,7 +809,7 @@
       "1 | msgs/initial_deposit/amount : 1",
       "2 | msgs/initial_deposit/denom : stake",
       "3 | msgs/proposal_type : Text",
-      "4 | msgs/proposer [1/2] : cosmos101234567890abcdefghijklmnopqrstu",
+      "4 | msgs/proposer [1/2] : secret101234567890abcdefghijklmnopqrstu",
       "4 | msgs/proposer [2/2] : vwxyz0",
       "5 | msgs/title : test",
       "6 | Memo : abc",
@@ -840,8 +840,8 @@
               "amount": "1000000",
               "denom": "uscrt"
             },
-            "delegator_address": "cosmos102hty0jv2s29lyc4u0tv97z9v298e24t3vwtpl",
-            "validator_address": "cosmosvaloper1grgelyng2v6v3t8z87wu3sxgt9m5s03xfytvz7"
+            "delegator_address": "secret102hty0jv2s29lyc4u0tv97z9v298e24t3vwtpl",
+            "validator_address": "secretvaloper1grgelyng2v6v3t8z87wu3sxgt9m5s03xfytvz7"
           }
         }
       ],
@@ -855,9 +855,9 @@
       "2 | Sequence : 0",
       "3 | Type : Delegate",
       "4 | Amount : 1000000 uscrt",
-      "5 | Delegator [1/2] : cosmos102hty0jv2s29lyc4u0tv97z9v298e24t",
+      "5 | Delegator [1/2] : secret102hty0jv2s29lyc4u0tv97z9v298e24t",
       "5 | Delegator [2/2] : 3vwtpl",
-      "6 | Validator [1/2] : cosmosvaloper1grgelyng2v6v3t8z87wu3sxgt",
+      "6 | Validator [1/2] : secretvaloper1grgelyng2v6v3t8z87wu3sxgt",
       "6 | Validator [2/2] : 9m5s03xfytvz7",
       "7 | Memo : Delegated with Ledger from union.market",
       "8 | Fee : 5000 uscrt",
@@ -888,8 +888,8 @@
               "amount": "1000000",
               "denom": "uscrt"
             },
-            "delegator_address": "cosmos102hty0jv2s29lyc4u0tv97z9v298e24t3vwtpl",
-            "validator_address": "cosmosvaloper1grgelyng2v6v3t8z87wu3sxgt9m5s03xfytvz7"
+            "delegator_address": "secret102hty0jv2s29lyc4u0tv97z9v298e24t3vwtpl",
+            "validator_address": "secretvaloper1grgelyng2v6v3t8z87wu3sxgt9m5s03xfytvz7"
           }
         }
       ],
@@ -900,9 +900,9 @@
     "expected": [
       "0 | Type : Delegate",
       "1 | Amount : 1.000000 SCRT",
-      "2 | Delegator [1/2] : cosmos102hty0jv2s29lyc4u0tv97z9v298e24t",
+      "2 | Delegator [1/2] : secret102hty0jv2s29lyc4u0tv97z9v298e24t",
       "2 | Delegator [2/2] : 3vwtpl",
-      "3 | Validator [1/2] : cosmosvaloper1grgelyng2v6v3t8z87wu3sxgt",
+      "3 | Validator [1/2] : secretvaloper1grgelyng2v6v3t8z87wu3sxgt",
       "3 | Validator [2/2] : 9m5s03xfytvz7",
       "4 | Memo : Delegated with Ledger from union.market",
       "5 | Fee : 0.005000 SCRT"
@@ -946,8 +946,8 @@
               "amount": "1000000",
               "denom": "uscrt"
             },
-            "delegator_address": "cosmos102hty0jv2s29lyc4u0tv97z9v298e24t3vwtpl",
-            "validator_address": "cosmosvaloper1grgelyng2v6v3t8z87wu3sxgt9m5s03xfytvz7"
+            "delegator_address": "secret102hty0jv2s29lyc4u0tv97z9v298e24t3vwtpl",
+            "validator_address": "secretvaloper1grgelyng2v6v3t8z87wu3sxgt9m5s03xfytvz7"
           }
         }
       ],
@@ -961,9 +961,9 @@
       "2 | Sequence : 0",
       "3 | Type : Delegate",
       "4 | Amount : 1000000 uscrt",
-      "5 | Delegator [1/2] : cosmos102hty0jv2s29lyc4u0tv97z9v298e24t",
+      "5 | Delegator [1/2] : secret102hty0jv2s29lyc4u0tv97z9v298e24t",
       "5 | Delegator [2/2] : 3vwtpl",
-      "6 | Validator [1/2] : cosmosvaloper1grgelyng2v6v3t8z87wu3sxgt",
+      "6 | Validator [1/2] : secretvaloper1grgelyng2v6v3t8z87wu3sxgt",
       "6 | Validator [2/2] : 9m5s03xfytvz7",
       "7 | Memo : Delegated with Ledger from union.market",
       "8 | Fee : 5000 uscrt",
@@ -1027,15 +1027,15 @@
         {
           "type": "cosmos-sdk/MsgWithdrawDelegationReward",
           "value": {
-            "delegator_address": "cosmos14lultfckehtszvzw4ehu0apvsr77afvyhgqhwh",
-            "validator_address": "cosmosvaloper1qwl879nx9t6kef4supyazayf7vjhennyh568ys"
+            "delegator_address": "secret14lultfckehtszvzw4ehu0apvsr77afvyhgqhwh",
+            "validator_address": "secretvaloper1qwl879nx9t6kef4supyazayf7vjhennyh568ys"
           }
         },
         {
           "type": "cosmos-sdk/MsgWithdrawDelegationReward",
           "value": {
-            "delegator_address": "cosmos14lultfckehtszvzw4ehu0apvsr77afvyhgqhwh",
-            "validator_address": "cosmosvaloper1x88j7vp2xnw3zec8ur3g4waxycyz7m0mahdv3p"
+            "delegator_address": "secret14lultfckehtszvzw4ehu0apvsr77afvyhgqhwh",
+            "validator_address": "secretvaloper1x88j7vp2xnw3zec8ur3g4waxycyz7m0mahdv3p"
           }
         }
       ],
@@ -1048,13 +1048,13 @@
       "1 | Account : 108",
       "2 | Sequence : 106",
       "3 | Type : Withdraw Reward",
-      "4 | Delegator [1/2] : cosmos14lultfckehtszvzw4ehu0apvsr77afvy",
+      "4 | Delegator [1/2] : secret14lultfckehtszvzw4ehu0apvsr77afvy",
       "4 | Delegator [2/2] : hgqhwh",
-      "5 | Validator [1/2] : cosmosvaloper1qwl879nx9t6kef4supyazayf7",
+      "5 | Validator [1/2] : secretvaloper1qwl879nx9t6kef4supyazayf7",
       "5 | Validator [2/2] : vjhennyh568ys",
-      "6 | Delegator [1/2] : cosmos14lultfckehtszvzw4ehu0apvsr77afvy",
+      "6 | Delegator [1/2] : secret14lultfckehtszvzw4ehu0apvsr77afvy",
       "6 | Delegator [2/2] : hgqhwh",
-      "7 | Validator [1/2] : cosmosvaloper1x88j7vp2xnw3zec8ur3g4waxy",
+      "7 | Validator [1/2] : secretvaloper1x88j7vp2xnw3zec8ur3g4waxy",
       "7 | Validator [2/2] : cyz7m0mahdv3p",
       "8 | Fee : 600 uscrt",
       "9 | Gas : 200000"
@@ -1080,15 +1080,15 @@
         {
           "type": "cosmos-sdk/MsgWithdrawDelegationReward",
           "value": {
-            "delegator_address": "cosmos14lultfckehtszvzw4ehu0apvsr77afvyhgqhwh",
-            "validator_address": "cosmosvaloper1qwl879nx9t6kef4supyazayf7vjhennyh568ys"
+            "delegator_address": "secret14lultfckehtszvzw4ehu0apvsr77afvyhgqhwh",
+            "validator_address": "secretvaloper1qwl879nx9t6kef4supyazayf7vjhennyh568ys"
           }
         },
         {
           "type": "cosmos-sdk/MsgWithdrawDelegationReward",
           "value": {
-            "delegator_address": "cosmos14lultfckehtszvzw4ehu0apvsr77afvyhgqhwh",
-            "validator_address": "cosmosvaloper1x88j7vp2xnw3zec8ur3g4waxycyz7m0mahdv3p"
+            "delegator_address": "secret14lultfckehtszvzw4ehu0apvsr77afvyhgqhwh",
+            "validator_address": "secretvaloper1x88j7vp2xnw3zec8ur3g4waxycyz7m0mahdv3p"
           }
         }
       ],
@@ -1098,11 +1098,11 @@
     "validationErr": "No error",
     "expected": [
       "0 | Type : Withdraw Reward",
-      "1 | Delegator [1/2] : cosmos14lultfckehtszvzw4ehu0apvsr77afvy",
+      "1 | Delegator [1/2] : secret14lultfckehtszvzw4ehu0apvsr77afvy",
       "1 | Delegator [2/2] : hgqhwh",
-      "2 | Validator [1/2] : cosmosvaloper1qwl879nx9t6kef4supyazayf7",
+      "2 | Validator [1/2] : secretvaloper1qwl879nx9t6kef4supyazayf7",
       "2 | Validator [2/2] : vjhennyh568ys",
-      "3 | Validator [1/2] : cosmosvaloper1x88j7vp2xnw3zec8ur3g4waxy",
+      "3 | Validator [1/2] : secretvaloper1x88j7vp2xnw3zec8ur3g4waxy",
       "3 | Validator [2/2] : cyz7m0mahdv3p",
       "4 | Fee : 0.000600 SCRT"
     ],
@@ -1127,29 +1127,29 @@
         {
           "type": "cosmos-sdk/MsgWithdrawDelegationReward",
           "value": {
-            "delegator_address": "cosmos14lultfckehtszvzw4ehu0apvsr77afvyhgqhwh",
-            "validator_address": "cosmosvaloper1qwl879nx9t6kef4supyazayf7vjhennyh568ys"
+            "delegator_address": "secret14lultfckehtszvzw4ehu0apvsr77afvyhgqhwh",
+            "validator_address": "secretvaloper1qwl879nx9t6kef4supyazayf7vjhennyh568ys"
           }
         },
         {
           "type": "cosmos-sdk/MsgWithdrawDelegationReward",
           "value": {
-            "delegator_address": "cosmos14lultfckehtszvzw4ehu0apvsr77afvyhgqhwh",
-            "validator_address": "cosmosvaloper1x88j7vp2xnw3zec8ur3g4waxycyz7m0mahdv3p"
+            "delegator_address": "secret14lultfckehtszvzw4ehu0apvsr77afvyhgqhwh",
+            "validator_address": "secretvaloper1x88j7vp2xnw3zec8ur3g4waxycyz7m0mahdv3p"
           }
         },
         {
           "type": "cosmos-sdk/MsgWithdrawDelegationReward",
           "value": {
-            "delegator_address": "cosmos14lultfckehtszvzw4ehu0apvsr77afvyhgqhwh",
-            "validator_address": "cosmosvaloper1grgelyng2v6v3t8z87wu3sxgt9m5s03xfytvz7"
+            "delegator_address": "secret14lultfckehtszvzw4ehu0apvsr77afvyhgqhwh",
+            "validator_address": "secretvaloper1grgelyng2v6v3t8z87wu3sxgt9m5s03xfytvz7"
           }
         },
         {
           "type": "cosmos-sdk/MsgWithdrawDelegationReward",
           "value": {
-            "delegator_address": "cosmos14lultfckehtszvzw4ehu0apvsr77afvyhgqhwh",
-            "validator_address": "cosmosvaloper1ttfytaf43nkytzp8hkfjfgjc693ky4t3y2n2ku"
+            "delegator_address": "secret14lultfckehtszvzw4ehu0apvsr77afvyhgqhwh",
+            "validator_address": "secretvaloper1ttfytaf43nkytzp8hkfjfgjc693ky4t3y2n2ku"
           }
         }
       ],
@@ -1162,21 +1162,21 @@
       "1 | Account : 108",
       "2 | Sequence : 106",
       "3 | Type : Withdraw Reward",
-      "4 | Delegator [1/2] : cosmos14lultfckehtszvzw4ehu0apvsr77afvy",
+      "4 | Delegator [1/2] : secret14lultfckehtszvzw4ehu0apvsr77afvy",
       "4 | Delegator [2/2] : hgqhwh",
-      "5 | Validator [1/2] : cosmosvaloper1qwl879nx9t6kef4supyazayf7",
+      "5 | Validator [1/2] : secretvaloper1qwl879nx9t6kef4supyazayf7",
       "5 | Validator [2/2] : vjhennyh568ys",
-      "6 | Delegator [1/2] : cosmos14lultfckehtszvzw4ehu0apvsr77afvy",
+      "6 | Delegator [1/2] : secret14lultfckehtszvzw4ehu0apvsr77afvy",
       "6 | Delegator [2/2] : hgqhwh",
-      "7 | Validator [1/2] : cosmosvaloper1x88j7vp2xnw3zec8ur3g4waxy",
+      "7 | Validator [1/2] : secretvaloper1x88j7vp2xnw3zec8ur3g4waxy",
       "7 | Validator [2/2] : cyz7m0mahdv3p",
-      "8 | Delegator [1/2] : cosmos14lultfckehtszvzw4ehu0apvsr77afvy",
+      "8 | Delegator [1/2] : secret14lultfckehtszvzw4ehu0apvsr77afvy",
       "8 | Delegator [2/2] : hgqhwh",
-      "9 | Validator [1/2] : cosmosvaloper1grgelyng2v6v3t8z87wu3sxgt",
+      "9 | Validator [1/2] : secretvaloper1grgelyng2v6v3t8z87wu3sxgt",
       "9 | Validator [2/2] : 9m5s03xfytvz7",
-      "10 | Delegator [1/2] : cosmos14lultfckehtszvzw4ehu0apvsr77afvy",
+      "10 | Delegator [1/2] : secret14lultfckehtszvzw4ehu0apvsr77afvy",
       "10 | Delegator [2/2] : hgqhwh",
-      "11 | Validator [1/2] : cosmosvaloper1ttfytaf43nkytzp8hkfjfgjc6",
+      "11 | Validator [1/2] : secretvaloper1ttfytaf43nkytzp8hkfjfgjc6",
       "11 | Validator [2/2] : 93ky4t3y2n2ku",
       "12 | Fee : 600 uscrt",
       "13 | Gas : 200000"
@@ -1202,29 +1202,29 @@
         {
           "type": "cosmos-sdk/MsgWithdrawDelegationReward",
           "value": {
-            "delegator_address": "cosmos1kky4yzth6gdrm8ga5zlfwhav33yr7hl87jycah",
-            "validator_address": "cosmosvaloper1kn3wugetjuy4zetlq6wadchfhvu3x740ae6z6x"
+            "delegator_address": "secret1kky4yzth6gdrm8ga5zlfwhav33yr7hl87jycah",
+            "validator_address": "secretvaloper1kn3wugetjuy4zetlq6wadchfhvu3x740ae6z6x"
           }
         },
         {
           "type": "cosmos-sdk/MsgWithdrawDelegationReward",
           "value": {
-            "delegator_address": "cosmos1kky4yzth6gdrm8ga5zlfwhav33yr7hl87jycah",
-            "validator_address": "cosmosvaloper1sjllsnramtg3ewxqwwrwjxfgc4n4ef9u2lcnj0"
+            "delegator_address": "secret1kky4yzth6gdrm8ga5zlfwhav33yr7hl87jycah",
+            "validator_address": "secretvaloper1sjllsnramtg3ewxqwwrwjxfgc4n4ef9u2lcnj0"
           }
         },
         {
           "type": "cosmos-sdk/MsgWithdrawDelegationReward",
           "value": {
-            "delegator_address": "cosmos1kky4yzth6gdrm8ga5zlfwhav33yr7hl87jycah",
-            "validator_address": "cosmosvaloper1ey69r37gfxvxg62sh4r0ktpuc46pzjrm873ae8"
+            "delegator_address": "secret1kky4yzth6gdrm8ga5zlfwhav33yr7hl87jycah",
+            "validator_address": "secretvaloper1ey69r37gfxvxg62sh4r0ktpuc46pzjrm873ae8"
           }
         },
         {
           "type": "cosmos-sdk/MsgWithdrawDelegationReward",
           "value": {
-            "delegator_address": "cosmos1kky4yzth6gdrm8ga5zlfwhav33yr7hl87jycah",
-            "validator_address": "cosmosvaloper1648ynlpdw7fqa2axt0w2yp3fk542junl7rsvq6"
+            "delegator_address": "secret1kky4yzth6gdrm8ga5zlfwhav33yr7hl87jycah",
+            "validator_address": "secretvaloper1648ynlpdw7fqa2axt0w2yp3fk542junl7rsvq6"
           }
         }
       ],
@@ -1237,21 +1237,21 @@
       "1 | Account : 108",
       "2 | Sequence : 106",
       "3 | Type : Withdraw Reward",
-      "4 | Delegator [1/2] : cosmos1kky4yzth6gdrm8ga5zlfwhav33yr7hl8",
+      "4 | Delegator [1/2] : secret1kky4yzth6gdrm8ga5zlfwhav33yr7hl8",
       "4 | Delegator [2/2] : 7jycah",
-      "5 | Validator [1/2] : cosmosvaloper1kn3wugetjuy4zetlq6wadchfh",
+      "5 | Validator [1/2] : secretvaloper1kn3wugetjuy4zetlq6wadchfh",
       "5 | Validator [2/2] : vu3x740ae6z6x",
-      "6 | Delegator [1/2] : cosmos1kky4yzth6gdrm8ga5zlfwhav33yr7hl8",
+      "6 | Delegator [1/2] : secret1kky4yzth6gdrm8ga5zlfwhav33yr7hl8",
       "6 | Delegator [2/2] : 7jycah",
-      "7 | Validator [1/2] : cosmosvaloper1sjllsnramtg3ewxqwwrwjxfgc",
+      "7 | Validator [1/2] : secretvaloper1sjllsnramtg3ewxqwwrwjxfgc",
       "7 | Validator [2/2] : 4n4ef9u2lcnj0",
-      "8 | Delegator [1/2] : cosmos1kky4yzth6gdrm8ga5zlfwhav33yr7hl8",
+      "8 | Delegator [1/2] : secret1kky4yzth6gdrm8ga5zlfwhav33yr7hl8",
       "8 | Delegator [2/2] : 7jycah",
-      "9 | Validator [1/2] : cosmosvaloper1ey69r37gfxvxg62sh4r0ktpuc",
+      "9 | Validator [1/2] : secretvaloper1ey69r37gfxvxg62sh4r0ktpuc",
       "9 | Validator [2/2] : 46pzjrm873ae8",
-      "10 | Delegator [1/2] : cosmos1kky4yzth6gdrm8ga5zlfwhav33yr7hl8",
+      "10 | Delegator [1/2] : secret1kky4yzth6gdrm8ga5zlfwhav33yr7hl8",
       "10 | Delegator [2/2] : 7jycah",
-      "11 | Validator [1/2] : cosmosvaloper1648ynlpdw7fqa2axt0w2yp3fk",
+      "11 | Validator [1/2] : secretvaloper1648ynlpdw7fqa2axt0w2yp3fk",
       "11 | Validator [2/2] : 542junl7rsvq6",
       "12 | Fee : 600 uscrt",
       "13 | Gas : 200000"
@@ -1277,113 +1277,113 @@
         {
           "type": "cosmos-sdk/MsgWithdrawDelegationReward",
           "value": {
-            "delegator_address": "cosmos14lultfckehtszvzw4ehu0apvsr77afvyhgqhwh",
-            "validator_address": "cosmosvaloper1qwl879nx9t6kef4supyazayf7vjhennyh568ys"
+            "delegator_address": "secret14lultfckehtszvzw4ehu0apvsr77afvyhgqhwh",
+            "validator_address": "secretvaloper1qwl879nx9t6kef4supyazayf7vjhennyh568ys"
           }
         },
         {
           "type": "cosmos-sdk/MsgWithdrawDelegationReward",
           "value": {
-            "delegator_address": "cosmos14lultfckehtszvzw4ehu0apvsr77afvyhgqhwh",
-            "validator_address": "cosmosvaloper1x88j7vp2xnw3zec8ur3g4waxycyz7m0mahdv3p"
+            "delegator_address": "secret14lultfckehtszvzw4ehu0apvsr77afvyhgqhwh",
+            "validator_address": "secretvaloper1x88j7vp2xnw3zec8ur3g4waxycyz7m0mahdv3p"
           }
         },
         {
           "type": "cosmos-sdk/MsgWithdrawDelegationReward",
           "value": {
-            "delegator_address": "cosmos14lultfckehtszvzw4ehu0apvsr77afvyhgqhwh",
-            "validator_address": "cosmosvaloper1grgelyng2v6v3t8z87wu3sxgt9m5s03xfytvz7"
+            "delegator_address": "secret14lultfckehtszvzw4ehu0apvsr77afvyhgqhwh",
+            "validator_address": "secretvaloper1grgelyng2v6v3t8z87wu3sxgt9m5s03xfytvz7"
           }
         },
         {
           "type": "cosmos-sdk/MsgWithdrawDelegationReward",
           "value": {
-            "delegator_address": "cosmos14lultfckehtszvzw4ehu0apvsr77afvyhgqhwh",
-            "validator_address": "cosmosvaloper1ttfytaf43nkytzp8hkfjfgjc693ky4t3y2n2ku"
+            "delegator_address": "secret14lultfckehtszvzw4ehu0apvsr77afvyhgqhwh",
+            "validator_address": "secretvaloper1ttfytaf43nkytzp8hkfjfgjc693ky4t3y2n2ku"
           }
         },
         {
           "type": "cosmos-sdk/MsgWithdrawDelegationReward",
           "value": {
-            "delegator_address": "cosmos14lultfckehtszvzw4ehu0apvsr77afvyhgqhwh",
-            "validator_address": "cosmosvaloper1wdrypwex63geqswmcy5qynv4w3z3dyef2qmyna"
+            "delegator_address": "secret14lultfckehtszvzw4ehu0apvsr77afvyhgqhwh",
+            "validator_address": "secretvaloper1wdrypwex63geqswmcy5qynv4w3z3dyef2qmyna"
           }
         },
         {
           "type": "cosmos-sdk/MsgWithdrawDelegationReward",
           "value": {
-            "delegator_address": "cosmos14lultfckehtszvzw4ehu0apvsr77afvyhgqhwh",
-            "validator_address": "cosmosvaloper102ruvpv2srmunfffxavttxnhezln6fnc54at8c"
+            "delegator_address": "secret14lultfckehtszvzw4ehu0apvsr77afvyhgqhwh",
+            "validator_address": "secretvaloper102ruvpv2srmunfffxavttxnhezln6fnc54at8c"
           }
         },
         {
           "type": "cosmos-sdk/MsgWithdrawDelegationReward",
           "value": {
-            "delegator_address": "cosmos14lultfckehtszvzw4ehu0apvsr77afvyhgqhwh",
-            "validator_address": "cosmosvaloper10e4vsut6suau8tk9m6dnrm0slgd6npe3jx5xpv"
+            "delegator_address": "secret14lultfckehtszvzw4ehu0apvsr77afvyhgqhwh",
+            "validator_address": "secretvaloper10e4vsut6suau8tk9m6dnrm0slgd6npe3jx5xpv"
           }
         },
         {
           "type": "cosmos-sdk/MsgWithdrawDelegationReward",
           "value": {
-            "delegator_address": "cosmos14lultfckehtszvzw4ehu0apvsr77afvyhgqhwh",
-            "validator_address": "cosmosvaloper1sxx9mszve0gaedz5ld7qdkjkfv8z992ax69k08"
+            "delegator_address": "secret14lultfckehtszvzw4ehu0apvsr77afvyhgqhwh",
+            "validator_address": "secretvaloper1sxx9mszve0gaedz5ld7qdkjkfv8z992ax69k08"
           }
         },
         {
           "type": "cosmos-sdk/MsgWithdrawDelegationReward",
           "value": {
-            "delegator_address": "cosmos14lultfckehtszvzw4ehu0apvsr77afvyhgqhwh",
-            "validator_address": "cosmosvaloper1ssm0d433seakyak8kcf93yefhknjleeds4y3em"
+            "delegator_address": "secret14lultfckehtszvzw4ehu0apvsr77afvyhgqhwh",
+            "validator_address": "secretvaloper1ssm0d433seakyak8kcf93yefhknjleeds4y3em"
           }
         },
         {
           "type": "cosmos-sdk/MsgWithdrawDelegationReward",
           "value": {
-            "delegator_address": "cosmos14lultfckehtszvzw4ehu0apvsr77afvyhgqhwh",
-            "validator_address": "cosmosvaloper13sduv92y3xdhy3rpmhakrc3v7t37e7ps9l0kpv"
+            "delegator_address": "secret14lultfckehtszvzw4ehu0apvsr77afvyhgqhwh",
+            "validator_address": "secretvaloper13sduv92y3xdhy3rpmhakrc3v7t37e7ps9l0kpv"
           }
         },
         {
           "type": "cosmos-sdk/MsgWithdrawDelegationReward",
           "value": {
-            "delegator_address": "cosmos14lultfckehtszvzw4ehu0apvsr77afvyhgqhwh",
-            "validator_address": "cosmosvaloper15urq2dtp9qce4fyc85m6upwm9xul3049e02707"
+            "delegator_address": "secret14lultfckehtszvzw4ehu0apvsr77afvyhgqhwh",
+            "validator_address": "secretvaloper15urq2dtp9qce4fyc85m6upwm9xul3049e02707"
           }
         },
         {
           "type": "cosmos-sdk/MsgWithdrawDelegationReward",
           "value": {
-            "delegator_address": "cosmos14lultfckehtszvzw4ehu0apvsr77afvyhgqhwh",
-            "validator_address": "cosmosvaloper14kn0kk33szpwus9nh8n87fjel8djx0y070ymmj"
+            "delegator_address": "secret14lultfckehtszvzw4ehu0apvsr77afvyhgqhwh",
+            "validator_address": "secretvaloper14kn0kk33szpwus9nh8n87fjel8djx0y070ymmj"
           }
         },
         {
           "type": "cosmos-sdk/MsgWithdrawDelegationReward",
           "value": {
-            "delegator_address": "cosmos14lultfckehtszvzw4ehu0apvsr77afvyhgqhwh",
-            "validator_address": "cosmosvaloper14lultfckehtszvzw4ehu0apvsr77afvyju5zzy"
+            "delegator_address": "secret14lultfckehtszvzw4ehu0apvsr77afvyhgqhwh",
+            "validator_address": "secretvaloper14lultfckehtszvzw4ehu0apvsr77afvyju5zzy"
           }
         },
         {
           "type": "cosmos-sdk/MsgWithdrawDelegationReward",
           "value": {
-            "delegator_address": "cosmos14lultfckehtszvzw4ehu0apvsr77afvyhgqhwh",
-            "validator_address": "cosmosvaloper1k9a0cs97vul8w2vwknlfmpez6prv8klv03lv3d"
+            "delegator_address": "secret14lultfckehtszvzw4ehu0apvsr77afvyhgqhwh",
+            "validator_address": "secretvaloper1k9a0cs97vul8w2vwknlfmpez6prv8klv03lv3d"
           }
         },
         {
           "type": "cosmos-sdk/MsgWithdrawDelegationReward",
           "value": {
-            "delegator_address": "cosmos14lultfckehtszvzw4ehu0apvsr77afvyhgqhwh",
-            "validator_address": "cosmosvaloper1kj0h4kn4z5xvedu2nd9c4a9a559wvpuvu0h6qn"
+            "delegator_address": "secret14lultfckehtszvzw4ehu0apvsr77afvyhgqhwh",
+            "validator_address": "secretvaloper1kj0h4kn4z5xvedu2nd9c4a9a559wvpuvu0h6qn"
           }
         },
         {
           "type": "cosmos-sdk/MsgWithdrawDelegationReward",
           "value": {
-            "delegator_address": "cosmos14lultfckehtszvzw4ehu0apvsr77afvyhgqhwh",
-            "validator_address": "cosmosvaloper1hjct6q7npsspsg3dgvzk3sdf89spmlpfdn6m9d"
+            "delegator_address": "secret14lultfckehtszvzw4ehu0apvsr77afvyhgqhwh",
+            "validator_address": "secretvaloper1hjct6q7npsspsg3dgvzk3sdf89spmlpfdn6m9d"
           }
         }
       ],
@@ -1396,69 +1396,69 @@
       "1 | Account : 108",
       "2 | Sequence : 106",
       "3 | Type : Withdraw Reward",
-      "4 | Delegator [1/2] : cosmos14lultfckehtszvzw4ehu0apvsr77afvy",
+      "4 | Delegator [1/2] : secret14lultfckehtszvzw4ehu0apvsr77afvy",
       "4 | Delegator [2/2] : hgqhwh",
-      "5 | Validator [1/2] : cosmosvaloper1qwl879nx9t6kef4supyazayf7",
+      "5 | Validator [1/2] : secretvaloper1qwl879nx9t6kef4supyazayf7",
       "5 | Validator [2/2] : vjhennyh568ys",
-      "6 | Delegator [1/2] : cosmos14lultfckehtszvzw4ehu0apvsr77afvy",
+      "6 | Delegator [1/2] : secret14lultfckehtszvzw4ehu0apvsr77afvy",
       "6 | Delegator [2/2] : hgqhwh",
-      "7 | Validator [1/2] : cosmosvaloper1x88j7vp2xnw3zec8ur3g4waxy",
+      "7 | Validator [1/2] : secretvaloper1x88j7vp2xnw3zec8ur3g4waxy",
       "7 | Validator [2/2] : cyz7m0mahdv3p",
-      "8 | Delegator [1/2] : cosmos14lultfckehtszvzw4ehu0apvsr77afvy",
+      "8 | Delegator [1/2] : secret14lultfckehtszvzw4ehu0apvsr77afvy",
       "8 | Delegator [2/2] : hgqhwh",
-      "9 | Validator [1/2] : cosmosvaloper1grgelyng2v6v3t8z87wu3sxgt",
+      "9 | Validator [1/2] : secretvaloper1grgelyng2v6v3t8z87wu3sxgt",
       "9 | Validator [2/2] : 9m5s03xfytvz7",
-      "10 | Delegator [1/2] : cosmos14lultfckehtszvzw4ehu0apvsr77afvy",
+      "10 | Delegator [1/2] : secret14lultfckehtszvzw4ehu0apvsr77afvy",
       "10 | Delegator [2/2] : hgqhwh",
-      "11 | Validator [1/2] : cosmosvaloper1ttfytaf43nkytzp8hkfjfgjc6",
+      "11 | Validator [1/2] : secretvaloper1ttfytaf43nkytzp8hkfjfgjc6",
       "11 | Validator [2/2] : 93ky4t3y2n2ku",
-      "12 | Delegator [1/2] : cosmos14lultfckehtszvzw4ehu0apvsr77afvy",
+      "12 | Delegator [1/2] : secret14lultfckehtszvzw4ehu0apvsr77afvy",
       "12 | Delegator [2/2] : hgqhwh",
-      "13 | Validator [1/2] : cosmosvaloper1wdrypwex63geqswmcy5qynv4w",
+      "13 | Validator [1/2] : secretvaloper1wdrypwex63geqswmcy5qynv4w",
       "13 | Validator [2/2] : 3z3dyef2qmyna",
-      "14 | Delegator [1/2] : cosmos14lultfckehtszvzw4ehu0apvsr77afvy",
+      "14 | Delegator [1/2] : secret14lultfckehtszvzw4ehu0apvsr77afvy",
       "14 | Delegator [2/2] : hgqhwh",
-      "15 | Validator [1/2] : cosmosvaloper102ruvpv2srmunfffxavttxnhe",
+      "15 | Validator [1/2] : secretvaloper102ruvpv2srmunfffxavttxnhe",
       "15 | Validator [2/2] : zln6fnc54at8c",
-      "16 | Delegator [1/2] : cosmos14lultfckehtszvzw4ehu0apvsr77afvy",
+      "16 | Delegator [1/2] : secret14lultfckehtszvzw4ehu0apvsr77afvy",
       "16 | Delegator [2/2] : hgqhwh",
-      "17 | Validator [1/2] : cosmosvaloper10e4vsut6suau8tk9m6dnrm0sl",
+      "17 | Validator [1/2] : secretvaloper10e4vsut6suau8tk9m6dnrm0sl",
       "17 | Validator [2/2] : gd6npe3jx5xpv",
-      "18 | Delegator [1/2] : cosmos14lultfckehtszvzw4ehu0apvsr77afvy",
+      "18 | Delegator [1/2] : secret14lultfckehtszvzw4ehu0apvsr77afvy",
       "18 | Delegator [2/2] : hgqhwh",
-      "19 | Validator [1/2] : cosmosvaloper1sxx9mszve0gaedz5ld7qdkjkf",
+      "19 | Validator [1/2] : secretvaloper1sxx9mszve0gaedz5ld7qdkjkf",
       "19 | Validator [2/2] : v8z992ax69k08",
-      "20 | Delegator [1/2] : cosmos14lultfckehtszvzw4ehu0apvsr77afvy",
+      "20 | Delegator [1/2] : secret14lultfckehtszvzw4ehu0apvsr77afvy",
       "20 | Delegator [2/2] : hgqhwh",
-      "21 | Validator [1/2] : cosmosvaloper1ssm0d433seakyak8kcf93yefh",
+      "21 | Validator [1/2] : secretvaloper1ssm0d433seakyak8kcf93yefh",
       "21 | Validator [2/2] : knjleeds4y3em",
-      "22 | Delegator [1/2] : cosmos14lultfckehtszvzw4ehu0apvsr77afvy",
+      "22 | Delegator [1/2] : secret14lultfckehtszvzw4ehu0apvsr77afvy",
       "22 | Delegator [2/2] : hgqhwh",
-      "23 | Validator [1/2] : cosmosvaloper13sduv92y3xdhy3rpmhakrc3v7",
+      "23 | Validator [1/2] : secretvaloper13sduv92y3xdhy3rpmhakrc3v7",
       "23 | Validator [2/2] : t37e7ps9l0kpv",
-      "24 | Delegator [1/2] : cosmos14lultfckehtszvzw4ehu0apvsr77afvy",
+      "24 | Delegator [1/2] : secret14lultfckehtszvzw4ehu0apvsr77afvy",
       "24 | Delegator [2/2] : hgqhwh",
-      "25 | Validator [1/2] : cosmosvaloper15urq2dtp9qce4fyc85m6upwm9",
+      "25 | Validator [1/2] : secretvaloper15urq2dtp9qce4fyc85m6upwm9",
       "25 | Validator [2/2] : xul3049e02707",
-      "26 | Delegator [1/2] : cosmos14lultfckehtszvzw4ehu0apvsr77afvy",
+      "26 | Delegator [1/2] : secret14lultfckehtszvzw4ehu0apvsr77afvy",
       "26 | Delegator [2/2] : hgqhwh",
-      "27 | Validator [1/2] : cosmosvaloper14kn0kk33szpwus9nh8n87fjel",
+      "27 | Validator [1/2] : secretvaloper14kn0kk33szpwus9nh8n87fjel",
       "27 | Validator [2/2] : 8djx0y070ymmj",
-      "28 | Delegator [1/2] : cosmos14lultfckehtszvzw4ehu0apvsr77afvy",
+      "28 | Delegator [1/2] : secret14lultfckehtszvzw4ehu0apvsr77afvy",
       "28 | Delegator [2/2] : hgqhwh",
-      "29 | Validator [1/2] : cosmosvaloper14lultfckehtszvzw4ehu0apvs",
+      "29 | Validator [1/2] : secretvaloper14lultfckehtszvzw4ehu0apvs",
       "29 | Validator [2/2] : r77afvyju5zzy",
-      "30 | Delegator [1/2] : cosmos14lultfckehtszvzw4ehu0apvsr77afvy",
+      "30 | Delegator [1/2] : secret14lultfckehtszvzw4ehu0apvsr77afvy",
       "30 | Delegator [2/2] : hgqhwh",
-      "31 | Validator [1/2] : cosmosvaloper1k9a0cs97vul8w2vwknlfmpez6",
+      "31 | Validator [1/2] : secretvaloper1k9a0cs97vul8w2vwknlfmpez6",
       "31 | Validator [2/2] : prv8klv03lv3d",
-      "32 | Delegator [1/2] : cosmos14lultfckehtszvzw4ehu0apvsr77afvy",
+      "32 | Delegator [1/2] : secret14lultfckehtszvzw4ehu0apvsr77afvy",
       "32 | Delegator [2/2] : hgqhwh",
-      "33 | Validator [1/2] : cosmosvaloper1kj0h4kn4z5xvedu2nd9c4a9a5",
+      "33 | Validator [1/2] : secretvaloper1kj0h4kn4z5xvedu2nd9c4a9a5",
       "33 | Validator [2/2] : 59wvpuvu0h6qn",
-      "34 | Delegator [1/2] : cosmos14lultfckehtszvzw4ehu0apvsr77afvy",
+      "34 | Delegator [1/2] : secret14lultfckehtszvzw4ehu0apvsr77afvy",
       "34 | Delegator [2/2] : hgqhwh",
-      "35 | Validator [1/2] : cosmosvaloper1hjct6q7npsspsg3dgvzk3sdf8",
+      "35 | Validator [1/2] : secretvaloper1hjct6q7npsspsg3dgvzk3sdf8",
       "35 | Validator [2/2] : 9spmlpfdn6m9d",
       "36 | Fee : 600 uscrt",
       "37 | Gas : 200000"
@@ -1484,15 +1484,15 @@
         {
           "type": "cosmos-sdk/MsgWithdrawDelegationReward",
           "value": {
-            "delegator_address": "cosmos19umvgcvk8cxsvzemy239nj9ngc2ltukantgyp3",
-            "validator_address": "cosmosvaloper1648ynlpdw7fqa2axt0w2yp3fk542junl7rsvq6"
+            "delegator_address": "secret19umvgcvk8cxsvzemy239nj9ngc2ltukantgyp3",
+            "validator_address": "secretvaloper1648ynlpdw7fqa2axt0w2yp3fk542junl7rsvq6"
           }
         },
         {
           "type": "cosmos-sdk/MsgDelegate",
           "value": {
-            "delegator_address": "cosmos19umvgcvk8cxsvzemy239nj9ngc2ltukantgyp3",
-            "validator_address": "cosmosvaloper1648ynlpdw7fqa2axt0w2yp3fk542junl7rsvq6",
+            "delegator_address": "secret19umvgcvk8cxsvzemy239nj9ngc2ltukantgyp3",
+            "validator_address": "secretvaloper1648ynlpdw7fqa2axt0w2yp3fk542junl7rsvq6",
             "amount": {
               "denom": "uscrt",
               "amount": "20139397"
@@ -1506,13 +1506,13 @@
     "validationErr": "No error",
     "expected": [
       "0 | Type : Withdraw Reward",
-      "1 | Delegator [1/2] : cosmos19umvgcvk8cxsvzemy239nj9ngc2ltuka",
+      "1 | Delegator [1/2] : secret19umvgcvk8cxsvzemy239nj9ngc2ltuka",
       "1 | Delegator [2/2] : ntgyp3",
-      "2 | Validator [1/2] : cosmosvaloper1648ynlpdw7fqa2axt0w2yp3fk",
+      "2 | Validator [1/2] : secretvaloper1648ynlpdw7fqa2axt0w2yp3fk",
       "2 | Validator [2/2] : 542junl7rsvq6",
       "3 | Type : Delegate",
       "4 | Amount : 20.139397 SCRT",
-      "5 | Validator [1/2] : cosmosvaloper1648ynlpdw7fqa2axt0w2yp3fk",
+      "5 | Validator [1/2] : secretvaloper1648ynlpdw7fqa2axt0w2yp3fk",
       "5 | Validator [2/2] : 542junl7rsvq6",
       "6 | Fee : 0.000600 SCRT"
     ],
