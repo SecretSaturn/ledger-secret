@@ -58,6 +58,7 @@ static const key_subst_t value_substitutions[] = {
         {"cosmos-sdk/MsgDeposit",                  "Deposit"},
         {"cosmos-sdk/MsgVote",                     "Vote"},
         {"cosmos-sdk/MsgWithdrawDelegationReward", "Withdraw Reward"},
+        {"wasm/MsgExecuteContract",                "Execute Encrypted Contact"},
 };
 
 parser_error_t tx_getToken(uint16_t token_index,

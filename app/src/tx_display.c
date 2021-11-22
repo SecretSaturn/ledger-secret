@@ -454,6 +454,13 @@ static const key_subst_t key_substitutions[] = {
         {"msgs/value/delegator_address",      "Delegator"},
         {"msgs/value/validator_address",      "Validator"},
 
+        // MsgWasmExecute
+        {"msgs/value/contract",               "Contract Address"},
+        {"msgs/value/msg",                    "Encrypted Msg"},
+        {"msgs/value/sender",                 "Sender"},
+        {"msgs/value/sent_funds",             "Sent Funds"},
+
+
         // MsgUndelegate
 //        {"msgs/value/delegator_address", "Delegator"},
 //        {"msgs/value/validator_address", "Validator"},
@@ -478,7 +485,7 @@ static const key_subst_t key_substitutions[] = {
 
         // MsgVote
         {"msgs/value/voter",                  "Description"},
-//        {"msgs/value/proposal_id",              "Proposal ID"},
+        {"msgs/value/proposal_id",            "Proposal ID"},
         {"msgs/value/option",                 "Option"},
 
         // MsgWithdrawDelegationReward
