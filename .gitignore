@@ -97,4 +97,5 @@ fuzz-*.log
 .vscode/
 tests_zemu/yarn.lock
 
+# macOS files
 .DS_Store
