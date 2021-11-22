@@ -1,6 +1,6 @@
 # Ledger Secret app
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
-[![GithubActions](https://github.com/zondax/ledger-secret/actions/workflows/main.yml/badge.svg)](https://github.com/Zondax/ledger-secret/blob/main/.github/workflows/main.yaml)
+[![GithubActions](https://github.com/SecretSaturn/ledger-secret/actions/workflows/main.yml/badge.svg)](https://github.com/SecretSaturn/ledger-secret/blob/main/.github/workflows/main.yaml)
 
 ---
 
