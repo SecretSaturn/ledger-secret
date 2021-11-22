@@ -96,3 +96,5 @@ fuzz-*.log
 
 .vscode/
 tests_zemu/yarn.lock
+
+.DS_Store
