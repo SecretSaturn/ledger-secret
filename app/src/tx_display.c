@@ -476,6 +476,20 @@ static const key_subst_t key_substitutions[] = {
         {"msgs/value/amount",                 "Amount"},
         {"msgs/value/delegator_address",      "Delegator"},
         {"msgs/value/validator_address",      "Validator"},
+
+        // MsgWasmExecute
+        {"msgs/value/contract",               "Contract Address"},
+        {"msgs/value/msg",                    "Encrypted Msg"},
+        {"msgs/value/sender",                 "Sender"},
+        {"msgs/value/sent_funds",             "Sent Funds"},
+
+
+        // MsgUndelegate
+//        {"msgs/value/delegator_address", "Delegator"},
+//        {"msgs/value/validator_address", "Validator"},
+
+        // MsgBeginRedelegate
+//        {"msgs/value/delegator_address", "Delegator"},
         {"msgs/value/validator_src_address",  "Validator Source"},
         {"msgs/value/validator_dst_address",  "Validator Dest"},
         {"msgs/value/description",            "Description"},
@@ -488,6 +502,7 @@ static const key_subst_t key_substitutions[] = {
         {"msgs/value/proposal_id",            "Proposal ID"},
         {"msgs/value/amount",                 "Amount"},
         {"msgs/value/voter",                  "Description"},
+        {"msgs/value/proposal_id",            "Proposal ID"},
         {"msgs/value/option",                 "Option"},
 };
 

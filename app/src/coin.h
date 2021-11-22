@@ -37,16 +37,16 @@ typedef enum {
 #define VIEW_ADDRESS_OFFSET_SECP256K1       PK_LEN_SECP256K1
 #define VIEW_ADDRESS_LAST_PAGE_DEFAULT      0
 
-#define MENU_MAIN_APP_LINE1                "Cosmos"
-#define MENU_MAIN_APP_LINE2                "Ready"
+#define MENU_MAIN_APP_LINE1                "Secret"
+#define MENU_MAIN_APP_LINE2                "ready"
 #define APPVERSION_LINE1                   "Version:"
 #define APPVERSION_LINE2                   ("v" APPVERSION)
 
-#define COIN_DEFAULT_CHAINID                "cosmoshub-4"
+#define COIN_DEFAULT_CHAINID                "secret-4"
 
 // In non-expert mode, the app will convert from uatom to ATOM
-#define COIN_DEFAULT_DENOM_BASE             "uatom"
-#define COIN_DEFAULT_DENOM_REPR             "ATOM"
+#define COIN_DEFAULT_DENOM_BASE             "uscrt"
+#define COIN_DEFAULT_DENOM_REPR             "SCRT"
 #define COIN_DEFAULT_DENOM_FACTOR           6
 #define COIN_DEFAULT_DENOM_TRIMMING         6
 
