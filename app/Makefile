@@ -52,14 +52,14 @@ $(info ************ LOGGING ENABLED ************)
 endif
 
 ifndef COIN
-COIN=ATOM
+COIN=SCRT
 endif
 
 $(info COIN  = [$(COIN)])
 
-ifeq ($(COIN),ATOM)
+ifeq ($(COIN),SCRT)
 # Main app configuration
-APPNAME = "Cosmos"
+APPNAME = "Secret"
 APPPATH = "44'/118'"
 else
 define error_message
@@ -229,7 +229,7 @@ dep/%.d: %.c Makefile
 
 .PHONY: listvariants
 listvariants:
-	@echo VARIANTS COIN ATOM
+	@echo VARIANTS COIN SCRT
 
 .PHONY: version
 version:
