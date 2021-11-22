@@ -95,3 +95,5 @@ fuzz-*.log
 /fuzz/corpora
 
 .vscode/
+
+.DS_Store
