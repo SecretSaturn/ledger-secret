@@ -85,7 +85,7 @@ describe('Standard', function () {
 
       // Derivation path. First 3 items are automatically hardened!
       const path = [44, 118, 5, 0, 3]
-      const resp = await app.getAddressAndPubKey(path, 'cosmos')
+      const resp = await app.getAddressAndPubKey(path, 'secret')
 
       console.log(resp)
 
@@ -95,7 +95,7 @@ describe('Standard', function () {
       expect(resp).toHaveProperty('bech32_address')
       expect(resp).toHaveProperty('compressed_pk')
 
-      expect(resp.bech32_address).toEqual('cosmos1wkd9tfm5pqvhhaxq77wv9tvjcsazuaykwsld65')
+      expect(resp.bech32_address).toEqual('secret1wkd9tfm5pqvhhaxq77wv9tvjcsazuaykwsld65')
       expect(resp.compressed_pk.length).toEqual(33)
     } finally {
       await sim.close()
@@ -110,7 +110,7 @@ describe('Standard', function () {
 
       // Derivation path. First 3 items are automatically hardened!
       const path = [44, 118, 5, 0, 3]
-      const respRequest = app.showAddressAndPubKey(path, 'cosmos')
+      const respRequest = app.showAddressAndPubKey(path, 'secret')
       // Wait until we are not in the main menu
       await sim.waitUntilScreenIsNot(sim.getMainMenuSnapshot())
 
@@ -125,7 +125,7 @@ describe('Standard', function () {
       expect(resp).toHaveProperty('bech32_address')
       expect(resp).toHaveProperty('compressed_pk')
 
-      expect(resp.bech32_address).toEqual('cosmos1wkd9tfm5pqvhhaxq77wv9tvjcsazuaykwsld65')
+      expect(resp.bech32_address).toEqual('secret1wkd9tfm5pqvhhaxq77wv9tvjcsazuaykwsld65')
       expect(resp.compressed_pk.length).toEqual(33)
     } finally {
       await sim.close()
@@ -140,7 +140,7 @@ describe('Standard', function () {
 
       // Derivation path. First 3 items are automatically hardened!
       const path = [44, 118, 2147483647, 0, 4294967295]
-      const resp = await app.showAddressAndPubKey(path, 'cosmos')
+      const resp = await app.showAddressAndPubKey(path, 'secret')
       console.log(resp)
 
       expect(resp.return_code).toEqual(0x6985)
@@ -163,7 +163,7 @@ describe('Standard', function () {
 
       // Derivation path. First 3 items are automatically hardened!
       const path = [44, 118, 2147483647, 0, 4294967295]
-      const respRequest = app.showAddressAndPubKey(path, 'cosmos')
+      const respRequest = app.showAddressAndPubKey(path, 'secret')
 
       // Wait until we are not in the main menu
       await sim.waitUntilScreenIsNot(sim.getMainMenuSnapshot())
@@ -180,7 +180,7 @@ describe('Standard', function () {
       expect(resp).toHaveProperty('bech32_address')
       expect(resp).toHaveProperty('compressed_pk')
 
-      expect(resp.bech32_address).toEqual('cosmos1ex7gkwwmq4vcgdwcalaq3t20pgwr37u6ntkqzh')
+      expect(resp.bech32_address).toEqual('secret1ex7gkwwmq4vcgdwcalaq3t20pgwr37u6ntkqzh')
       expect(resp.compressed_pk.length).toEqual(33)
     } finally {
       await sim.close()
@@ -197,7 +197,7 @@ describe('Standard', function () {
       const tx = JSON.stringify(example_tx_str_basic)
 
       // get address / publickey
-      const respPk = await app.getAddressAndPubKey(path, 'cosmos')
+      const respPk = await app.getAddressAndPubKey(path, 'secret')
       expect(respPk.return_code).toEqual(0x9000)
       expect(respPk.error_message).toEqual('No errors')
       console.log(respPk)
@@ -243,7 +243,7 @@ describe('Standard', function () {
       const tx = JSON.stringify(example_tx_str_basic2)
 
       // get address / publickey
-      const respPk = await app.getAddressAndPubKey(path, 'cosmos')
+      const respPk = await app.getAddressAndPubKey(path, 'secret')
       expect(respPk.return_code).toEqual(0x9000)
       expect(respPk.error_message).toEqual('No errors')
       console.log(respPk)
