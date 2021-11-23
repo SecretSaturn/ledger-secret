@@ -209,7 +209,7 @@ describe('Standard', function () {
       await sim.waitUntilScreenIsNot(sim.getMainMenuSnapshot())
 
       // Now navigate the address / path
-      await sim.compareSnapshotsAndAccept('.', `${m.prefix.toLowerCase()}-sign_basic`, m.prefix == 'S' ? 6 : 5)
+      await sim.compareSnapshotsAndAccept('.', `${m.prefix.toLowerCase()}-sign_basic`, m.prefix == 'S' ? 8 : 6)
 
       const resp = await signatureRequest
       console.log(resp)
