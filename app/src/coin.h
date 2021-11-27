@@ -44,13 +44,13 @@ typedef enum {
 
 #define COIN_DEFAULT_CHAINID                "secret-4"
 
-// In non-expert mode, the app will convert from uatom to ATOM
+// In non-expert mode, the app will convert from uscrt to SCRT
 #define COIN_DEFAULT_DENOM_BASE             "uscrt"
 #define COIN_DEFAULT_DENOM_REPR             "SCRT"
 #define COIN_DEFAULT_DENOM_FACTOR           6
 #define COIN_DEFAULT_DENOM_TRIMMING         6
 
-#define COIN_DENOM_MAXSIZE                  50
+#define COIN_DENOM_MAXSIZE                  68
 #define COIN_AMOUNT_MAXSIZE                 50
 
 #define MENU_MAIN_APP_LINE2_SECRET         "?"
