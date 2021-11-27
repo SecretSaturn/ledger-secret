@@ -460,6 +460,10 @@ static const key_subst_t key_substitutions[] = {
         {"msgs/value/sender",                 "Sender"},
         {"msgs/value/sent_funds",             "Sent Funds"},
 
+        // MsgQueryPermit
+        {"msgs/value/permit_name",            "Permit Name"},
+        {"msgs/value/allowed_tokens",         "Allowed Tokens"},
+        {"msgs/value/permissions",            "Permissions"},
 
         // MsgUndelegate
 //        {"msgs/value/delegator_address", "Delegator"},
