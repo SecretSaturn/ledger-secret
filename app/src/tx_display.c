@@ -455,8 +455,8 @@ static const key_subst_t key_substitutions[] = {
         {"msgs/value/validator_address",      "Validator"},
 
         // MsgWasmExecute
-        {"msgs/value/contract",               "Contract Address"},
-        {"msgs/value/msg",                    "Encrypted Msg"},
+        {"msgs/value/contract",               "Contract"},
+        {"msgs/value/msg",                    "Message"},
         {"msgs/value/sender",                 "Sender"},
         {"msgs/value/sent_funds",             "Sent Funds"},
 
