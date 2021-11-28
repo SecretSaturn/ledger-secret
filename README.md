@@ -9,6 +9,9 @@ _Please visit their website at [zondax.ch](zondax.ch)_
 
 Forked and modified for the Secret Network by Secret Saturn.
 
+If you want to support us, please consider delegating to our validator here, thank you: 
+[🪐 Secret Saturn Validator](https://secretnodes.com/secret/chains/secret-4/validators/E855109B212B9EB65C982FD44EE13E77E9E33C4A)
+
 ---
 
 This project contains the Secret app for Ledger Nano S and X.
