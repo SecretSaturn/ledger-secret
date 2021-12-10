@@ -60,7 +60,7 @@ $(info COIN  = [$(COIN)])
 ifeq ($(COIN),SCRT)
 # Main app configuration
 APPNAME = "Secret"
-APPPATH = "44'/118'"
+APPPATH = "44'/529'"
 else
 define error_message
 
