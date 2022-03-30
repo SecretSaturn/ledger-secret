@@ -50,7 +50,7 @@ typedef enum {
 #define COIN_DEFAULT_DENOM_FACTOR           6
 #define COIN_DEFAULT_DENOM_TRIMMING         6
 
-#define COIN_DENOM_MAXSIZE                  68
+#define COIN_DENOM_MAXSIZE                  70
 #define COIN_AMOUNT_MAXSIZE                 50
 
 #define MENU_MAIN_APP_LINE2_SECRET         "?"
