@@ -29,6 +29,7 @@ const defaultOptions = {
   logging: true,
   custom: `-s "${APP_SEED}"`,
   X11: false,
+  startText: 'ready'
 }
 
 jest.setTimeout(60000)
@@ -51,7 +52,7 @@ describe('Standard', function () {
     const sim = new Zemu(m.path)
     try {
       await sim.start({ ...defaultOptions, model: m.name })
-      await sim.navigateAndCompareSnapshots('.', `${m.prefix.toLowerCase()}-mainmenu`, [1, 0, 0, 6, -6])
+      await sim.navigateAndCompareSnapshots('.', `${m.prefix.toLowerCase()}-mainmenu`, [1, 0, 0, 5, -6])
     } finally {
       await sim.close()
     }
