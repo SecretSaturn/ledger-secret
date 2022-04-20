@@ -1,3 +1,5 @@
+#pragma clang diagnostic push
+#pragma ide diagnostic ignored "misc-no-recursion"
 /*******************************************************************************
 *   (c) 2018, 2019 Zondax GmbH
 *
@@ -33,10 +35,9 @@ __Z_INLINE void strcat_chunk_s(char *dst, uint16_t dst_max, const char *src_chun
         src_chunk_size = space_left;
     }
 
+    // Check bounds
     if (src_chunk_size > 0) {
-        // Check bounds
-        MEMCPY(dst + prev_size, src_chunk, src_chunk_size);
-        // terminate
+        MEMMOVE(dst + prev_size, src_chunk, src_chunk_size);
         *(dst + prev_size + src_chunk_size) = 0;
     }
 }
@@ -58,8 +59,9 @@ static const key_subst_t value_substitutions[] = {
         {"cosmos-sdk/MsgDeposit",                  "Deposit"},
         {"cosmos-sdk/MsgVote",                     "Vote"},
         {"cosmos-sdk/MsgWithdrawDelegationReward", "Withdraw Reward"},
+        {"cosmos-sdk/MsgWithdrawValidatorCommission", "Withdraw Val. Commission"},
         {"wasm/MsgExecuteContract",                "Execute Encrypted Wasm Contract"},
-        {"query_permit",                           "Query Permit"},
+        {"query_permit",                           "Query Permit"},        
 };
 
 parser_error_t tx_getToken(uint16_t token_index,
@@ -102,7 +104,7 @@ parser_error_t tx_getToken(uint16_t token_index,
     return parser_ok;
 }
 
-__Z_INLINE void append_key_item(int16_t token_index) {
+__Z_INLINE void append_key_item(uint16_t token_index) {
     if (*parser_tx_obj.query.out_key > 0) {
         // There is already something there, add separator
         strcat_chunk_s(parser_tx_obj.query.out_key,
@@ -215,7 +217,7 @@ parser_error_t tx_traverse_find(uint16_t root_token_index, uint16_t *ret_value_t
             break;
         }
         case JSMN_ARRAY: {
-            for (int16_t i = 0; i < el_count; ++i) {
+            for (uint16_t i = 0; i < el_count; ++i) {
                 uint16_t element_index;
                 CHECK_PARSER_ERR(array_get_nth_element(&parser_tx_obj.json,
                                                        root_token_index, i,
@@ -242,3 +244,5 @@ parser_error_t tx_traverse_find(uint16_t root_token_index, uint16_t *ret_value_t
 
     return parser_query_no_results;
 }
+
+#pragma clang diagnostic pop
