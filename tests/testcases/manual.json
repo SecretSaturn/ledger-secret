@@ -1733,7 +1733,7 @@
     "name": "MsgWithdrawValidatorCommission",
     "tx": {
       "account_number": "6571",
-      "chain_id": "cosmos-4",
+      "chain_id": "secret-4",
       "fee": {
         "amount": [
           {
