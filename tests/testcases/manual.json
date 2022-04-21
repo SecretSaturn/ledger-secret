@@ -1547,7 +1547,7 @@
               "coins": [
                 {
                   "amount": "10",
-                  "denom": "atom"
+                  "denom": "scrt"
                 }
               ]
             }
@@ -1558,7 +1558,7 @@
               "coins": [
                 {
                   "amount": "10",
-                  "denom": "atom"
+                  "denom": "scrt"
                 }
               ]
             }
@@ -1583,13 +1583,13 @@
     "parsingErr": "No error",
     "validationErr": "No error",
     "expected": [
-      "0 | Chain ID : secrer-4",
+      "0 | Chain ID : secret-4",
       "1 | Account : 0",
       "2 | Sequence : 1",
       "3 | Source Address : secretaccaddr1d9h8qatxxINPUT",
-      "4 | Source Coins : 10 atom",
+      "4 | Source Coins : 10 scrt",
       "5 | Dest Address : secretaccaddr1da6hguxxOUTPUT",
-      "6 | Dest Coins : 10 atom",
+      "6 | Dest Coins : 10 scrt",
       "7 | Memo : testmemo",
       "8 | Fee [1/2] : 5 feecoin1",
       "8 | Fee [2/2] : 6 feecoin2",
@@ -1627,7 +1627,7 @@
               "coins": [
                 {
                   "amount": "10",
-                  "denom": "atom"
+                  "denom": "scrt"
                 }
               ]
             }
@@ -1638,7 +1638,7 @@
               "coins": [
                 {
                   "amount": "10",
-                  "denom": "atom"
+                  "denom": "scrt"
                 }
               ]
             }
@@ -1664,9 +1664,9 @@
     "validationErr": "No error",
     "expected": [
       "0 | Source Address : secretaccaddr1d9h8qatxxINPUT",
-      "1 | Source Coins : 10 atom",
+      "1 | Source Coins : 10 scrt",
       "2 | Dest Address : secretaccaddr1da6hguxxOUTPUT",
-      "3 | Dest Coins : 10 atom",
+      "3 | Dest Coins : 10 scrt",
       "4 | Memo : testmemo",
       "5 | Fee : 5 photon",
       "6 | Tip [1/2] : 65 tipcoin",
@@ -1761,7 +1761,7 @@
       "1 | Validator [1/2] : secretvaloper1grgelyng2v6v3t8z87wu3sxgt",
       "1 | Validator [2/2] : 9m5s03xfytvz7",
       "2 | Memo : Zondax.ch",
-      "3 | Fee : 0.005000 ATOM"
+      "3 | Fee : 0.005000 SCRT"
     ],
     "expert": false
   },
