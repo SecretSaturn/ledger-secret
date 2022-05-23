@@ -27,7 +27,7 @@ uint32_t hdPath[HDPATH_LEN_DEFAULT];
 uint8_t bech32_hrp_len;
 char bech32_hrp[MAX_BECH32_HRP_LEN + 1];
 
-#if defined(TARGET_NANOS) || defined(TARGET_NANOX)
+#if defined(TARGET_NANOS) || defined(TARGET_NANOX) || defined(TARGET_NANOS2)
 #include "cx.h"
 
 zxerr_t crypto_extractPublicKey(const uint32_t path[HDPATH_LEN_DEFAULT], uint8_t *pubKey, uint16_t pubKeyLen) {
@@ -172,7 +172,7 @@ void ripemd160_32(uint8_t *out, uint8_t *in) {
 void crypto_set_hrp(char *p) {
     bech32_hrp_len = strlen(p);
     if (bech32_hrp_len < MAX_BECH32_HRP_LEN) {
-        strlcpy(bech32_hrp, p, sizeof(bech32_hrp));
+        snprintf(bech32_hrp, sizeof(bech32_hrp), "%s", p);
     }
 }
 
