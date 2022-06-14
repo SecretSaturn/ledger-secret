@@ -29,15 +29,14 @@ MEMORY
   SRAM    (rwx) : ORIGIN = 0xda7a0000, LENGTH = 30K
 }
 
-PAGE_SIZE  = 256;
-STACK_SIZE = 3800;
+PAGE_SIZE  = 512;
+STACK_SIZE = 8192;
 END_STACK  = ORIGIN(SRAM) + LENGTH(SRAM);
 
-ENTRY(main)
+ENTRY(main);
 
 SECTIONS
 {
-
   /****************************************************************/
   /* This section locates the code in FLASH                       */
   /****************************************************************/
@@ -47,13 +46,10 @@ SECTIONS
   {
     /* provide start code symbol, shall be zero */
     _text = .;
-    _nvram = .;
-    PROVIDE(_nvram = . + ORIGIN(FLASH));
+    _nvram_start = .;
 
-    PROVIDE(_setjmp = setjmp); /*thanks clang*/
-
-     /* ensure main is always @ 0xC0D00000 */
-     *(.boot*)
+    /* ensure main is always @ 0xC0D00000 */
+    *(.boot*)
 
     /* place the other code and rodata defined BUT nvram variables that are displaced in a r/w area */
     *(.text*)
@@ -75,12 +71,9 @@ SECTIONS
 
     . = ALIGN(PAGE_SIZE);
     _envram_data = .;
-    /* _nvram_data_size = _envram_data - _nvram_data; */
-    _install_parameters = .;
-    PROVIDE(N_install_parameters = .);
-    _envram = .;
-    PROVIDE(_envram = . + ORIGIN(FLASH));
 
+    _install_parameters = .;
+    _nvram_end = .;
   } > FLASH = 0x00
 
   .data (NOLOAD):
@@ -171,5 +164,7 @@ SECTIONS
   .debug_funcnames 0 : { *(.debug_funcnames) }
   .debug_typenames 0 : { *(.debug_typenames) }
   .debug_varnames  0 : { *(.debug_varnames) }
-
 }
+
+PROVIDE(_nvram = ABSOLUTE(_nvram_start));
+PROVIDE(_envram = ABSOLUTE(_nvram_end));
