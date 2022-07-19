@@ -9,4 +9,4 @@
 	url = https://github.com/LedgerHQ/nanosplus-secure-sdk
 [submodule "deps/ledger-zxlib"]
 	path = deps/ledger-zxlib
-	url = https://github.com/Zondax/ledger-zxlib.git
+	url = https://github.com/SecretSaturn/ledger-zxlib
