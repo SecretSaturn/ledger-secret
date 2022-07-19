@@ -201,12 +201,12 @@ export const example_tx_str_basic_extra_fields = {
 
 export const ibc_denoms = {
   account_number: "0",
-  chain_id: "cosmoshub-4",
+  chain_id: "secret-4",
   fee: {
     amount: [
       {
         "amount": '5',
-        "denom": 'uatom',
+        "denom": 'uscrt',
       }
     ],
     gas: '10000',
@@ -216,7 +216,7 @@ export const ibc_denoms = {
     {
       inputs: [
         {
-          address: "cosmosaccaddr1d9h8qat5e4ehc5",
+          address: "secretaccaddr1d9h8qat5e4ehc5",
           coins: [
             {
               amount: '10',
@@ -227,7 +227,7 @@ export const ibc_denoms = {
       ],
       outputs: [
         {
-          address: 'cosmosaccaddr1da6hgur4wse3jx32',
+          address: 'secretaccaddr1da6hgur4wse3jx32',
           coins: [
             {
               amount: '10',
