@@ -60,6 +60,7 @@ static const key_subst_t value_substitutions[] = {
         {"cosmos-sdk/MsgVote",                        "Vote"},
         {"cosmos-sdk/MsgWithdrawDelegationReward",    "Withdraw Reward"},
         {"cosmos-sdk/MsgWithdrawValidatorCommission", "Withdraw Val. Commission"},
+        {"cosmos-sdk/MsgTransfer",                    "IBC Transfer"},
         {"wasm/MsgExecuteContract",                   "Execute Encrypted Wasm Contract"},
         {"query_permit",                              "Query Permit"},
 };
