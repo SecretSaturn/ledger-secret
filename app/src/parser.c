@@ -262,6 +262,32 @@ __Z_INLINE parser_error_t parser_formatAmount(uint16_t amountToken,
     return parser_formatAmountItem(showItemTokenIdx, outVal, outValLen, showPageIdx, &dummy);
 }
 
+__Z_INLINE parser_error_t parser_hash_msg(uint16_t msgIndex,
+                                              char *outVal, uint16_t outValLen,
+                                              uint8_t pageIdx, uint8_t *pageCount) {
+    *pageCount = 0;
+
+    char bufferUI[70];
+    MEMZERO(outVal, outValLen);
+    MEMZERO(bufferUI, sizeof(bufferUI));
+
+    const uint8_t *SHAPtr = (uint8_t*)(parser_tx_obj.tx + parser_tx_obj.json.tokens[msgIndex].start);
+    const int32_t SHALen = parser_tx_obj.json.tokens[msgIndex].end -
+                             parser_tx_obj.json.tokens[msgIndex].start;
+    
+    uint8_t messageDigest[32];
+    MEMZERO(messageDigest,sizeof(messageDigest));
+
+    // Hash it
+    cx_hash_sha256(SHAPtr, SHALen, messageDigest, sizeof(messageDigest));
+
+    snprintf(bufferUI, sizeof(bufferUI),"%02H",messageDigest);
+    
+    pageString(outVal, outValLen, bufferUI, pageIdx, pageCount);
+
+    return parser_ok;
+}
+
 parser_error_t parser_getItem(const parser_context_t *ctx,
                               uint8_t displayIdx,
                               char *outKey, uint16_t outKeyLen,
@@ -295,7 +321,12 @@ parser_error_t parser_getItem(const parser_context_t *ctx,
         CHECK_PARSER_ERR(parser_formatAmount(ret_value_token_index,
                                              outVal, outValLen,
                                              pageIdx, pageCount))
-    } else {
+    } else if (strcmp(tmpKey, "msgs/value/msg") == 0 && tx_is_expert_mode()) {
+    	CHECK_PARSER_ERR(parser_hash_msg(ret_value_token_index,
+                                    outVal, outValLen,
+                                    pageIdx, pageCount))
+    } 
+    else {
         CHECK_PARSER_ERR(tx_getToken(ret_value_token_index,
                                      outVal, outValLen,
                                      pageIdx, pageCount))

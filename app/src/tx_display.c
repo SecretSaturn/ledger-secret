@@ -522,6 +522,13 @@ parser_error_t tx_display_make_friendly() {
     CHECK_PARSER_ERR(tx_indexRootFields())
 
     // post process keys
+
+    //replace Message with Message Hash when Hash Signing is enabled
+    if (!strcmp(parser_tx_obj.query.out_key, "msgs/value/msg") && tx_is_expert_mode()) {
+	    strncpy_s(parser_tx_obj.query.out_key, "Msg Hash", parser_tx_obj.query.out_key_len);
+    }
+
+
     for (size_t i = 0; i < array_length(key_substitutions); i++) {
         if (!strcmp(parser_tx_obj.query.out_key, key_substitutions[i].str1)) {
             strncpy_s(parser_tx_obj.query.out_key, key_substitutions[i].str2, parser_tx_obj.query.out_key_len);
