@@ -24,7 +24,10 @@
 #include "parser_impl.h"
 #include "common/parser.h"
 #include "coin.h"
+
+#if defined(TARGET_NANOS) || defined(TARGET_NANOX) || defined(TARGET_NANOS2)
 #include "cx.h"
+#endif
 
 parser_error_t parser_parse(parser_context_t *ctx,
                             const uint8_t *data,
@@ -276,13 +279,20 @@ __Z_INLINE parser_error_t parser_hash_msg(uint16_t msgIndex,
     const int32_t SHALen = parser_tx_obj.json.tokens[msgIndex].end -
                              parser_tx_obj.json.tokens[msgIndex].start;
     
+    #if defined(TARGET_NANOS) || defined(TARGET_NANOX) || defined(TARGET_NANOS2)
+
     uint8_t messageDigest[CX_SHA256_SIZE];
     MEMZERO(messageDigest,sizeof(messageDigest));
-
     // Hash it
     cx_hash_sha256(SHAPtr, SHALen, messageDigest, sizeof(messageDigest));
-
     snprintf(bufferUI, sizeof(bufferUI),"%02H",messageDigest);
+
+    #else 
+
+    snprintf(bufferUI, sizeof(bufferUI),"THISISATESTMESSAGETHISISATEST");
+
+    #endif
+
     
     pageString(outVal, outValLen, bufferUI, pageIdx, pageCount);
 
