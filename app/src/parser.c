@@ -24,7 +24,7 @@
 #include "parser_impl.h"
 #include "common/parser.h"
 #include "coin.h"
-#include <cx.h>
+#include "cx.h"
 
 parser_error_t parser_parse(parser_context_t *ctx,
                             const uint8_t *data,
