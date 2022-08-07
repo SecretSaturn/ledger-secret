@@ -24,6 +24,7 @@
 #include "parser_impl.h"
 #include "common/parser.h"
 #include "coin.h"
+#include <cx.h>
 
 parser_error_t parser_parse(parser_context_t *ctx,
                             const uint8_t *data,
@@ -275,7 +276,7 @@ __Z_INLINE parser_error_t parser_hash_msg(uint16_t msgIndex,
     const int32_t SHALen = parser_tx_obj.json.tokens[msgIndex].end -
                              parser_tx_obj.json.tokens[msgIndex].start;
     
-    uint8_t messageDigest[32];
+    uint8_t messageDigest[CX_SHA256_SIZE];
     MEMZERO(messageDigest,sizeof(messageDigest));
 
     // Hash it
