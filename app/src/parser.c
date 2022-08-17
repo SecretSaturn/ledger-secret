@@ -107,6 +107,7 @@ __Z_INLINE bool_t parser_isAmount(char *key) {
     if (strcmp(key, "msgs/value/sent_funds") == 0) {
         return bool_true;
     }
+
     return bool_false;
 }
 

@@ -95,6 +95,9 @@ fuzz-*.log
 /fuzz/corpora
 
 .vscode/
+
+# macOS files
+.DS_Store
 tests_zemu/yarn.lock
 
 # macOS files
