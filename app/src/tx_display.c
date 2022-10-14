@@ -496,6 +496,11 @@ static const key_subst_t key_substitutions[] = {
         {"msgs/value/timeout_height",         "Timeout Height"},
         {"msgs/value/timeout_timestamp",      "Timeout Timestamp"},
 
+        // MsgAuthz
+        {"msgs/value/grant",                  "Grant"},
+        {"msgs/value/grantee",                "Grantee"},
+        {"msgs/value/granter",                "Granter"},
+
         // MsgUndelegate
 //        {"msgs/value/delegator_address", "Delegator"},
 //        {"msgs/value/validator_address", "Validator"},
