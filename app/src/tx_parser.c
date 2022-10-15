@@ -62,8 +62,9 @@ static const key_subst_t value_substitutions[] = {
         {"cosmos-sdk/MsgWithdrawValidatorCommission", "Withdraw Val. Commission"},
         {"cosmos-sdk/MsgTransfer",                    "IBC Transfer"},
         {"cosmos-sdk/MsgGrant",                    "Grant Authorization"},
-        {"wasm/MsgExecuteContract",                   "Execute Encrypted Wasm Contract"},
-        {"query_permit",                              "Query Permit"},
+        {"wasm/MsgExecuteContract",                "Execute Encrypted Wasm Contract"},
+        {"query_permit",                           "Query Permit"},
+        {"sign/MsgSignData",                       "Sign Data"},
 };
 
 parser_error_t tx_getToken(uint16_t token_index,

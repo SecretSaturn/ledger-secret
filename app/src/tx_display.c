@@ -501,6 +501,10 @@ static const key_subst_t key_substitutions[] = {
         {"msgs/value/grantee",                "Grantee"},
         {"msgs/value/granter",                "Granter"},
 
+        //MsgSignData
+        {"msgs/value/data",                   "Data"},
+        {"msgs/value/signer",                 "Signer"},   
+
         // MsgUndelegate
 //        {"msgs/value/delegator_address", "Delegator"},
 //        {"msgs/value/validator_address", "Validator"},
