@@ -5,7 +5,7 @@
 ---
 
 Original Ledger app for Cosmos developed by zondax.ch
-_Please visit their website at [zondax.ch](zondax.ch)_
+_Please visit their website at [zondax.ch](https://zondax.ch)_
 
 Forked and modified for the Secret Network by Secret Saturn.
 
