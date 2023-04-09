@@ -34,7 +34,7 @@ namespace {
 
         return tx_getToken(ret_value_token_index,
                            parser_tx_obj.query.out_val, parser_tx_obj.query.out_val_len,
-                           parser_tx_obj.query.page_index, numChunks);
+                           parser_tx_obj.query.page_index, numChunks, NULL);  // get_required_root_item(ret_value_token_index)
     }
 #pragma clang diagnostic pop
 

@@ -33,7 +33,7 @@ void validate_testcase(const testcase_t &tc) {
     const auto *buffer = (const uint8_t *) tc.tx.c_str();
     size_t bufferLen = tc.tx.size();
 
-    err = parser_parse(&ctx, buffer, bufferLen);
+    err = parser_parse(&ctx, buffer, bufferLen, TX_MODE_RAW);
     ASSERT_EQ(parser_getErrorDescription(err), tc.parsingErr) << "Parsing error mismatch";
 
     if (err != parser_ok)
@@ -52,7 +52,7 @@ void check_testcase(const testcase_t &tc) {
     const auto *buffer = (const uint8_t *) tc.tx.c_str();
     size_t bufferLen = tc.tx.size();
 
-    err = parser_parse(&ctx, buffer, bufferLen);
+    err = parser_parse(&ctx, buffer, bufferLen, TX_MODE_RAW);
     ASSERT_EQ(parser_getErrorDescription(err), tc.parsingErr)  << "Parsing error mismatch";
 
     if (err != parser_ok)

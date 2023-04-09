@@ -27,8 +27,9 @@
 
 parser_error_t parser_parse(parser_context_t *ctx,
                             const uint8_t *data,
-                            size_t dataLen) {
-    CHECK_PARSER_ERR(tx_display_readTx(ctx, data, dataLen))
+                            size_t dataLen,
+                            tx_mode_t mode) {
+    CHECK_PARSER_ERR(tx_display_readTx(ctx, data, dataLen, mode))
     return parser_ok;
 }
 
@@ -299,7 +300,7 @@ parser_error_t parser_getItem(const parser_context_t *ctx,
     } else {
         CHECK_PARSER_ERR(tx_getToken(ret_value_token_index,
                                      outVal, outValLen,
-                                     pageIdx, pageCount))
+                                     pageIdx, pageCount, tmpKey))
     }
     CHECK_APP_CANARY()
 

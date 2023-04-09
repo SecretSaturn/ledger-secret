@@ -56,7 +56,7 @@ __Z_INLINE void handleGetAddrSecp256K1(volatile uint32_t *flags, volatile uint32
     THROW(APDU_CODE_OK);
 }
 
-__Z_INLINE void handleSignSecp256K1(volatile uint32_t *flags, volatile uint32_t *tx, uint32_t rx) {
+__Z_INLINE void handleSignSecp256K1(volatile uint32_t *flags, volatile uint32_t *tx, uint32_t rx, uint8_t ins) {
     if (!process_chunk(tx, rx)) {
         THROW(APDU_CODE_OK);
     }
@@ -69,7 +69,7 @@ __Z_INLINE void handleSignSecp256K1(volatile uint32_t *flags, volatile uint32_t 
     }
     parser_tx_obj.own_addr = (const char *) (G_io_apdu_buffer + VIEW_ADDRESS_OFFSET_SECP256K1);
 
-    const char *error_msg = tx_parse();
+    const char *error_msg = tx_parse(ins == INS_SIGN_SECP256K1_DECRYPT? TX_MODE_DECRYPT: TX_MODE_RAW);
 
     if (error_msg != NULL) {
         int error_msg_length = strlen(error_msg);
@@ -113,11 +113,12 @@ void handleApdu(volatile uint32_t *flags, volatile uint32_t *tx, uint32_t rx) {
                     break;
                 }
 
-                case INS_SIGN_SECP256K1: {
+                case INS_SIGN_SECP256K1:
+                case INS_SIGN_SECP256K1_DECRYPT: {
                     if( os_global_pin_is_validated() != BOLOS_UX_OK ) {
                         THROW(APDU_CODE_COMMAND_NOT_ALLOWED);
                     }
-                    handleSignSecp256K1(flags, tx, rx);
+                    handleSignSecp256K1(flags, tx, rx, G_io_apdu_buffer[OFFSET_INS]);
                     break;
                 }
 

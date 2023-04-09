@@ -100,21 +100,64 @@ const char *parser_getErrorDescription(parser_error_t err) {
             return "JSON Missing memo";
         case parser_json_unexpected_error:
             return "JSON Unexpected error";
+//////
+        case parser_invalid_tek_k:
+            return "Invalid tx encryption key size";
+        case parser_invalid_tek_data:
+            return "Invalid tx encryption key data";
+        case parser_invalid_msg_contents:
+            return "Invalid contract message contents";
+        case parser_aes_init_error:
+            return "Failed to init AES key";
+        case parser_aes_decrypt_error:
+            return "Failed to decrypt AES block";
+        
 
         default:
             return "Unrecognized error code";
     }
 }
 
-parser_error_t _readTx(parser_context_t *c, parser_tx_t *v __attribute((unused))) {
+parser_error_t _readTx(parser_context_t *c, tx_mode_t mode, parser_tx_t *v) {
+    const char *buffer = (const char *) c->buffer;
+    uint16_t buffer_len = c->bufferLen;
+
+    const char *json = buffer;
+    uint16_t json_len = buffer_len;
+
+    // init transaction encryption key fields
+    parser_tx_obj.tek_k = 0;
+    parser_tx_obj.tek_data = NULL;
+
+    // instruction is to sign in decrypt mode
+    if (mode == TX_MODE_DECRYPT) {
+        // extract tek k and data from buffer
+        uint8_t tek_k = buffer[0];
+        const char* tek_data = buffer + 1;
+
+        // invalid key size
+        if (tek_k != 32) return parser_invalid_tek_k;
+
+        // missing key data
+        if (buffer_len < 1 + tek_k) return parser_invalid_tek_data;
+
+        // set fields
+        parser_tx_obj.tek_k = tek_k;
+        parser_tx_obj.tek_data = tek_data;
+
+        // adjust json data pointer and length
+        json += 1 + tek_k;
+        json_len -= 1 + tek_k;
+    }
+
     parser_error_t err = json_parse(&parser_tx_obj.json,
-                                    (const char *) c->buffer,
-                                    c->bufferLen);
+                                    json,
+                                    json_len);
     if (err != parser_ok) {
         return err;
     }
 
-    parser_tx_obj.tx = (const char *) c->buffer;
+    parser_tx_obj.tx = json;
     parser_tx_obj.flags.cache_valid = 0;
     parser_tx_obj.filter_msg_type_count = 0;
     parser_tx_obj.filter_msg_from_count = 0;

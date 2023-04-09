@@ -18,6 +18,7 @@
 #include "os.h"
 #include "coin.h"
 #include "zxerror.h"
+#include "txmode_def.h"
 
 void tx_initialize();
 
@@ -42,7 +43,7 @@ uint8_t *tx_get_buffer();
 /// Parse message stored in transaction buffer
 /// This function should be called as soon as full buffer data is loaded.
 /// \return It returns NULL if data is valid or error message otherwise.
-const char *tx_parse();
+const char *tx_parse(tx_mode_t mode);
 
 /// Return the number of items in the transaction
 zxerr_t tx_getNumItems(uint8_t *num_items);

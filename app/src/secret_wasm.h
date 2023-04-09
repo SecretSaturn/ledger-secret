@@ -1,5 +1,5 @@
 /*******************************************************************************
-*  (c) 2019 Zondax GmbH
+*   (c) 2023 Solar Republic LLC
 *
 *  Licensed under the Apache License, Version 2.0 (the "License");
 *  you may not use this file except in compliance with the License.
@@ -13,37 +13,24 @@
 *  See the License for the specific language governing permissions and
 *  limitations under the License.
 ********************************************************************************/
-#pragma once
 
-#include "parser_common.h"
-#include <zxmacros.h>
-#include "zxtypes.h"
-#include "json/json_parser.h"
-#include "parser_txdef.h"
-#include "txmode_def.h"
+#include <stdio.h>
+#include <stdint.h>
+#include "parser_impl.h"
 
-#ifdef __cplusplus
-extern "C" {
-#endif
+#define AES_BLOCK_SIZE 16
+#define MSG_PREAMBLE_LEN 64
+#define SHARED_SECRET_LEN 64
 
-typedef struct {
-    char str1[50];
-    char str2[50];
-} key_subst_t;
+static const char key_wasm_msg[] = "msgs/value/msg";
 
-typedef struct {
-    char str1[50];
-    char str2[50];
-} value_subst_t;
+parser_error_t aes_siv_decrypt(
+    const uint8_t *key,
+    size_t key_len,
+    const uint8_t *payload,
+    size_t payload_len,
+    uint8_t *plaintext,
+    uint16_t *out_len
+);
 
-extern parser_tx_t parser_tx_obj;
-
-parser_error_t parser_init(parser_context_t *ctx,
-                           const uint8_t *buffer,
-                           size_t bufferSize);
-
-parser_error_t _readTx(parser_context_t *c, tx_mode_t mode, parser_tx_t *v);
-
-#ifdef __cplusplus
-}
-#endif
+parser_error_t decrypt_secret_wasm_msg(uint8_t *in, uint16_t in_len, uint8_t *out, uint16_t *out_len);

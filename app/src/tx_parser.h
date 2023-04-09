@@ -52,7 +52,7 @@ parser_error_t tx_traverse(int16_t root_token_index, uint8_t *numChunks);
 // Retrieves the value for the corresponding token index. If the value goes beyond val_len, the chunk_idx will be used
 parser_error_t tx_getToken(uint16_t token_index,
                            char *out_val, uint16_t out_val_len,
-                           uint8_t pageIdx, uint8_t *pageCount);
+                           uint8_t pageIdx, uint8_t *pageCount, char *key);
 
 __Z_INLINE bool is_msg_type_field(char *field_name) {
     return strcmp(field_name, "msgs/type") == 0;

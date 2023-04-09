@@ -99,6 +99,8 @@ file(GLOB_RECURSE LIB_SRC
         ${CMAKE_CURRENT_SOURCE_DIR}/app/src/tx_parser.c
         ${CMAKE_CURRENT_SOURCE_DIR}/app/src/tx_display.c
         ${CMAKE_CURRENT_SOURCE_DIR}/app/src/tx_validate.c
+        ${CMAKE_CURRENT_SOURCE_DIR}/app/src/base64/base64_encoder.c
+        ${CMAKE_CURRENT_SOURCE_DIR}/app/src/secret_wasm.c
         )
 
 add_library(app_lib STATIC

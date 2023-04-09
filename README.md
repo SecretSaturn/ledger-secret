@@ -7,10 +7,11 @@
 Original Ledger app for Cosmos developed by zondax.ch
 _Please visit their website at [zondax.ch](https://zondax.ch)_
 
-Forked and modified for the Secret Network by Secret Saturn.
+Forked and modified for the Secret Network by Secret Saturn and StarShell.
 
-If you want to support us, please consider delegating to our validator here, thank you: 
-[🪐 Secret Saturn Validator](https://secretnodes.com/secret/chains/secret-4/validators/E855109B212B9EB65C982FD44EE13E77E9E33C4A)
+If you want to support us, please consider delegating to our validators here, thank you: 
+[🪐 Secret Saturn Validator](https://secretnodes.com/secret/validators/secretvaloper1q0rth4fu4svxnw63vjd7w74nadzsdp0fmkhj3d)
+[StarShell Validator](https://secretnodes.com/secret/validators/secretvaloper1yv9f4tankaktdtf8lq6rjsx9c9rpfptc7kzhz2)
 
 ---
 

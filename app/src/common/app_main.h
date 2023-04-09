@@ -34,6 +34,8 @@
 #define INS_SIGN_SECP256K1              0x02
 #define INS_GET_ADDR_SECP256K1          0x04
 
+#define INS_SIGN_SECP256K1_DECRYPT      0x42
+
 void app_init();
 
 void app_main();
