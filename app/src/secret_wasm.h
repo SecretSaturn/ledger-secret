@@ -19,12 +19,21 @@
 #include "parser_impl.h"
 
 #define AES_BLOCK_SIZE 16
+#define AES_SIV_SUBKEY_LEN 16
 #define MSG_PREAMBLE_LEN 64
 #define SHARED_SECRET_LEN 64
 
+static const uint8_t zero_block[AES_BLOCK_SIZE] = {0};
+
 static const char key_wasm_msg[] = "msgs/value/msg";
 
-parser_error_t aes_siv_decrypt(
+typedef struct {
+    cx_aes_key_t *mac_key;
+    const uint8_t *k1;
+    const uint8_t *k2;
+} cmac_context_t;
+
+parser_error_t aes_siv_open(
     const uint8_t *key,
     size_t key_len,
     const uint8_t *payload,
