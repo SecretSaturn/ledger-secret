@@ -74,6 +74,10 @@ typedef struct {
 
     // current tx query
     tx_query_t query;
+
+    // tx encryption key
+    uint8_t tek_k;
+    const char *tek_data;
 } parser_tx_t;
 
 #ifdef __cplusplus

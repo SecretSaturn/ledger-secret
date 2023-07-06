@@ -63,6 +63,12 @@ typedef enum {
     parser_json_missing_account_number,
     parser_json_missing_memo,
     parser_json_unexpected_error,
+    // Secret specific
+    parser_invalid_tek_k,
+    parser_invalid_tek_data,
+    parser_invalid_msg_contents,
+    parser_aes_init_error,
+    parser_aes_decrypt_error,
 } parser_error_t;
 
 typedef struct {

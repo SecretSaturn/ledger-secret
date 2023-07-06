@@ -22,6 +22,8 @@
 #include "tx_parser.h"
 #include "parser_impl.h"
 #include <zxmacros.h>
+#include "lcx_sha256.h"
+#include "secret_wasm.h"
 
 #define NUM_REQUIRED_ROOT_PAGES 7
 
@@ -87,9 +89,9 @@ typedef struct {
 
 display_cache_t display_cache;
 
-parser_error_t tx_display_readTx(parser_context_t *ctx, const uint8_t *data, size_t dataLen) {
+parser_error_t tx_display_readTx(parser_context_t *ctx, const uint8_t *data, size_t dataLen, tx_mode_t mode) {
     CHECK_PARSER_ERR(parser_init(ctx, data, dataLen))
-    CHECK_PARSER_ERR(_readTx(ctx, &parser_tx_obj))
+    CHECK_PARSER_ERR(_readTx(ctx, mode, &parser_tx_obj))
     return parser_ok;
 }
 
@@ -114,7 +116,7 @@ __Z_INLINE parser_error_t calculate_is_default_chainid() {
     CHECK_PARSER_ERR(tx_getToken(
             ret_value_token_index,
             outVal, sizeof(outVal),
-            0, &pageCount))
+            0, &pageCount, NULL))  // "chain_id"
 
     zemu_log_stack(outVal);
     zemu_log_stack(COIN_DEFAULT_CHAINID);
@@ -129,6 +131,54 @@ __Z_INLINE parser_error_t calculate_is_default_chainid() {
 
     return parser_ok;
 }
+
+
+__Z_INLINE parser_error_t verify_encrypted_wasm_msgs() {
+    parsed_json_t *json = &parser_tx_obj.json;
+    
+    uint16_t root_idx = display_cache.root_item_start_token_idx[root_item_msgs];
+    jsmntok_t root_tkn = json->tokens[root_idx];
+
+    // .msgs is an array
+    if (root_tkn.type == JSMN_ARRAY) {
+        uint16_t element_cnt; array_get_element_count(json, root_idx, &element_cnt);
+
+        // each item in .msgs[]
+        for (uint16_t i_element = 0; i_element < element_cnt; ++i_element) {
+            // conservatively reuse idx and tkn registers
+            uint16_t item_idx; array_get_nth_element(json, root_idx, i_element, &item_idx);
+            jsmntok_t item_tkn = json->tokens[item_idx];
+
+            // .msgs[i] is an object
+            if (item_tkn.type == JSMN_OBJECT) {
+                object_get_value(json, item_idx, "value", &item_idx);
+                item_tkn = json->tokens[item_idx];
+
+                // .msgs[i].value is an object
+                if (item_tkn.type == JSMN_OBJECT) {
+                    object_get_value(json, item_idx, "msg", &item_idx);
+                    item_tkn = json->tokens[item_idx];
+
+                    // .msgs[i].value.msg is a string
+                    if (item_tkn.type == JSMN_STRING) {
+                        uint16_t msg_len = item_tkn.end - item_tkn.start;
+
+                        char *decrypted_msg[msg_len];
+                        CHECK_PARSER_ERR(decrypt_secret_wasm_msg(
+                            (const uint8_t *) json->buffer + item_tkn.start,
+                            msg_len,
+                            decrypted_msg,
+                            &msg_len
+                        ))
+                    }
+                }
+            }
+        }
+    }
+
+	return parser_ok;
+}
+
 
 __Z_INLINE bool address_matches_own(char *addr) {
     if (parser_tx_obj.own_addr == NULL) {
@@ -214,7 +264,7 @@ parser_error_t tx_indexRootFields() {
                     ret_value_token_index,
                     parser_tx_obj.query.out_val,
                     parser_tx_obj.query.out_val_len,
-                    0, &pageCount))
+                    0, &pageCount, NULL))  // get_required_root_item(ret_value_token_index)
 
             ZEMU_LOGF(200, "[ZEMU] %s : %s", tmp_key, parser_tx_obj.query.out_val)
 
@@ -291,6 +341,11 @@ parser_error_t tx_indexRootFields() {
     parser_tx_obj.flags.cache_valid = 1;
 
     CHECK_PARSER_ERR(calculate_is_default_chainid())
+
+    // // verify contents of all encrypted wasm msgs
+    // if (parser_tx_obj.tek_k) {
+    //     CHECK_PARSER_ERR(verify_encrypted_wasm_msgs())
+    // }
 
     // turn off grouping if we are not in expert mode
     if (tx_is_expert_mode()) {
@@ -527,14 +582,23 @@ static const key_subst_t key_substitutions[] = {
         {"msgs/value/option",                 "Option"},
 };
 
+static const char key_wasm_msg_decrypted[] = "Decrypted Msg";
+
 parser_error_t tx_display_make_friendly() {
     CHECK_PARSER_ERR(tx_indexRootFields())
 
-    // post process keys
-    for (size_t i = 0; i < array_length(key_substitutions); i++) {
-        if (!strcmp(parser_tx_obj.query.out_key, key_substitutions[i].str1)) {
-            strncpy_s(parser_tx_obj.query.out_key, key_substitutions[i].str2, parser_tx_obj.query.out_key_len);
-            break;
+    // decrypted msg label applies; replace key label
+    if (parser_tx_obj.tek_k && !strcmp(parser_tx_obj.query.out_key, key_wasm_msg)) {
+        strncpy_s(parser_tx_obj.query.out_key, key_wasm_msg_decrypted, parser_tx_obj.query.out_key_len);
+    }
+    // all other keys
+    else {
+        // post process keys
+        for (size_t i = 0; i < array_length(key_substitutions); i++) {
+            if (!strcmp(parser_tx_obj.query.out_key, key_substitutions[i].str1)) {
+                strncpy_s(parser_tx_obj.query.out_key, key_substitutions[i].str2, parser_tx_obj.query.out_key_len);
+                break;
+            }
         }
     }
 

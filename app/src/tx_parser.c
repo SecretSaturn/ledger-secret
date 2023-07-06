@@ -21,6 +21,7 @@
 #include "zxmacros.h"
 #include "zxformat.h"
 #include "parser_impl.h"
+#include "secret_wasm.h"
 
 // strcat but source does not need to be terminated (a chunk from a bigger string is concatenated)
 // dst_max is measured in bytes including the space for NULL termination
@@ -50,7 +51,7 @@ __Z_INLINE void strcat_chunk_s(char *dst, uint16_t dst_max, const char *src_chun
 ///////////////////////////
 ///////////////////////////
 
-static const key_subst_t value_substitutions[] = {
+static const value_subst_t value_substitutions[] = {
         {"cosmos-sdk/MsgSend",                     "Send"},
         {"cosmos-sdk/MsgDelegate",                 "Delegate"},
         {"cosmos-sdk/MsgUndelegate",               "Undelegate"},
@@ -69,7 +70,7 @@ static const key_subst_t value_substitutions[] = {
 
 parser_error_t tx_getToken(uint16_t token_index,
                            char *out_val, uint16_t out_val_len,
-                           uint8_t pageIdx, uint8_t *pageCount) {
+                           uint8_t pageIdx, uint8_t *pageCount, char *key) {
     *pageCount = 0;
     MEMZERO(out_val, out_val_len);
 
@@ -86,18 +87,50 @@ parser_error_t tx_getToken(uint16_t token_index,
     // empty strings are considered the first page
     *pageCount = 1;
     if (inLen > 0) {
-        for (uint32_t i = 0; i < array_length(value_substitutions); i++) {
-            const char *substStr = value_substitutions[i].str1;
-            const size_t substStrLen = strlen(substStr);
-            if (inLen == substStrLen && !MEMCMP(inValue, substStr, substStrLen)) {
-                inValue = value_substitutions[i].str2;
-                inLen = strlen(value_substitutions[i].str2);
-                break;
+        // should decrypt msg
+        if (parser_tx_obj.tek_k && key != NULL && strcmp(key, key_wasm_msg) == 0 && inLen >= SHARED_SECRET_LEN) {
+            *pageCount = 0;
+
+            // ignore the shared secret at beginning of plaintext
+            inLen -= SHARED_SECRET_LEN;
+
+            // need a buffer to hold the decrypted message contents (i.e., the actual JSON sent to contract)
+            char contents[inLen];
+
+            // non-empty data
+            if(inLen > 0) {
+                // decrypt msg and discard the shared secret prefix
+                decrypt_secret_wasm_msg(inValue, inLen + SHARED_SECRET_LEN, contents, &inLen);
+            }
+
+            // display the decrypted contents
+            inValue = contents;
+
+            // compute number of pages required to show contents
+            *pageCount = (uint8_t) (inLen / out_val_len);
+            uint16_t lastChunkLen = (inLen % out_val_len);
+            if (lastChunkLen > 0) (*pageCount)++;
+
+            // apply pagination
+            if (pageIdx < *pageCount) {
+                if (lastChunkLen == 0 || pageIdx != *pageCount - 1) lastChunkLen = out_val_len;
+
+                MEMMOVE(out_val, inValue + (pageIdx * out_val_len), lastChunkLen);
             }
         }
+        else {
+            for (uint32_t i = 0; i < array_length(value_substitutions); i++) {
+                const char *substStr = value_substitutions[i].str1;
+                const size_t substStrLen = strlen(substStr);
+                if (inLen == substStrLen && !MEMCMP(inValue, substStr, substStrLen)) {
+                    inValue = value_substitutions[i].str2;
+                    inLen = strlen(value_substitutions[i].str2);
+                    break;
+                }
+            }
 
-        pageStringExt(out_val, out_val_len, inValue, inLen, pageIdx, pageCount);
-
+            pageStringExt(out_val, out_val_len, inValue, inLen, pageIdx, pageCount);
+        }
     }
 
     if (pageIdx >= *pageCount) {

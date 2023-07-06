@@ -19,6 +19,7 @@
 #include <stdint.h>
 #include <common/parser_common.h>
 #include "parser_txdef.h"
+#include "txmode_def.h"
 
 #ifdef __cplusplus
 extern "C" {
@@ -43,7 +44,7 @@ parser_error_t tx_display_query(uint16_t displayIdx,
                                 uint16_t *ret_value_token_index);
 
 parser_error_t tx_display_readTx(parser_context_t *c,
-                                 const uint8_t *data, size_t dataLen);
+                                 const uint8_t *data, size_t dataLen, tx_mode_t mode);
 
 parser_error_t tx_display_numItems(uint8_t *num_items);
 

@@ -21,13 +21,15 @@ extern "C" {
 #endif
 
 #include "parser_impl.h"
+#include "txmode_def.h"
 
 const char *parser_getErrorDescription(parser_error_t err);
 
 //// parses a tx buffer
 parser_error_t parser_parse(parser_context_t *ctx,
                             const uint8_t *data,
-                            size_t dataLen);
+                            size_t dataLen,
+                            tx_mode_t mode);
 
 //// verifies tx fields
 parser_error_t parser_validate(const parser_context_t *ctx);

@@ -1,5 +1,5 @@
 /*******************************************************************************
-*  (c) 2019 Zondax GmbH
+*  (c) 2023 Solar Republic LLC
 *
 *  Licensed under the Apache License, Version 2.0 (the "License");
 *  you may not use this file except in compliance with the License.
@@ -15,35 +15,10 @@
 ********************************************************************************/
 #pragma once
 
-#include "parser_common.h"
-#include <zxmacros.h>
-#include "zxtypes.h"
-#include "json/json_parser.h"
-#include "parser_txdef.h"
-#include "txmode_def.h"
+#include <stdint.h>
 
-#ifdef __cplusplus
-extern "C" {
-#endif
-
-typedef struct {
-    char str1[50];
-    char str2[50];
-} key_subst_t;
-
-typedef struct {
-    char str1[50];
-    char str2[50];
-} value_subst_t;
-
-extern parser_tx_t parser_tx_obj;
-
-parser_error_t parser_init(parser_context_t *ctx,
-                           const uint8_t *buffer,
-                           size_t bufferSize);
-
-parser_error_t _readTx(parser_context_t *c, tx_mode_t mode, parser_tx_t *v);
-
-#ifdef __cplusplus
-}
-#endif
+typedef uint8_t tx_mode_t;
+enum {
+    TX_MODE_RAW = 0,
+    TX_MODE_DECRYPT = 1
+};

@@ -240,3 +240,30 @@ export const ibc_denoms = {
   ],
   sequence: '1'
 }
+
+export const example_tx_str_execute = {
+  account_number: '1',
+  chain_id: 'secret-4',
+  fee: {
+    amount: [
+      {
+        amount: '4000',
+        denom: 'uscrt',
+      },
+    ],
+    gas: '200000',
+  },
+  memo: '',
+  msgs: [
+    {
+      type: 'wasm/MsgExecuteContract',
+      value: {
+        contract: 'secret1k0jntykt7e4g3y88ltc60czgjuqdy4c9e8fzek',
+        msg: '01vgUGLEoBQLuvmdI1iyurOwWFzG5z/iWet4e9aZ0ZY6Cey5m7/GAsbb35avP/B4Qj3xXJzs4ymOoCdiTPZ/a/y6m8Fno76ANrbR/uErwnOtzI+0PeYhKwoRcQeDLtxbu21yCI6YvIyNKmcII1A3KrJaGxknjevHapAKFn+WwDlNmIMA3+d4vHtwe0F347hR6SyTT8lZDYMSwJ+DOK3yypMChkRYP1MVbVfq0hOD4aT6VUSi8lHBiboXr2maWH55fqlPFcctmYl50ZhBGS83ZXcDX1MDJNjWQg6A2kuGSWUWW6NjTtf7rAiVv5AJXNiB',
+        sender: 'secret15zcng5c36ddh9q8wtv597ludtswudgrdthp5al',
+        sent_funds: [],
+      },
+    },
+  ],
+  sequence: '1'
+}

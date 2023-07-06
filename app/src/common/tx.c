@@ -76,13 +76,14 @@ uint8_t *tx_get_buffer()
 
 static parser_tx_t tx_obj;
 
-const char *tx_parse()
+const char *tx_parse(tx_mode_t mode)
 {
     MEMZERO(&tx_obj, sizeof(tx_obj));
 
     uint8_t err = parser_parse(&ctx_parsed_tx,
                                tx_get_buffer(),
-                               tx_get_buffer_length());
+                               tx_get_buffer_length(),
+                               mode);
     zemu_log_stack("parse|parsed");
 
     if (err != parser_ok)
