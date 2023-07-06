@@ -22,6 +22,7 @@
 #define AES_SIV_SUBKEY_LEN 16
 #define MSG_PREAMBLE_LEN 64
 #define SHARED_SECRET_LEN 64
+#define CODE_HASH_LEN 64
 
 static const uint8_t zero_block[AES_BLOCK_SIZE] = {0};
 

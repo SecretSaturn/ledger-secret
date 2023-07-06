@@ -327,7 +327,7 @@ parser_error_t decrypt_secret_wasm_msg(uint8_t *in, uint16_t in_len, uint8_t *ou
 
     // replace codepoints outside the ASCII range with a single character
     uint8_t *write = plaintext;
-    uint8_t *read = plaintext + 64;  // skip code hash
+    uint8_t *read = plaintext + CODE_HASH_LEN;  // skip code hash
     while (read < plaintext + plaintext_len && *read != '\0') {
         utf8_int32_t codepoint;
         read = (uint8_t *)utf8codepoint((const char *)read, &codepoint);
