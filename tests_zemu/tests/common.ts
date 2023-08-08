@@ -240,3 +240,29 @@ export const ibc_denoms = {
   ],
   sequence: '1'
 }
+
+export const votingOptions = {
+  account_number: "0",
+    chain_id: "secret-4",
+    fee: {
+      amount: [
+        {
+          amount: "50000",
+          denom: "uscrt"
+        }
+      ],
+      gas: "10000"
+    },
+    memo: "",
+    msgs: [
+      {
+        type: "cosmos-sdk/MsgVote",
+        value: {
+          option: "2",
+          proposal_id: "113",
+          voter:"secret1q0rth4fu4svxnw63vjd7w74nadzsdp0f23e0uy"
+        }
+      }
+    ],
+    sequence: "1"
+}
