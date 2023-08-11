@@ -1939,5 +1939,44 @@
       "9 | Gas : 10000"
     ],
     "expert": true
+  },
+  {
+    "name": "VotingOptions",
+    "tx": {
+      "account_number": "0",
+      "chain_id": "secret-4",
+      "fee": {
+        "amount": [
+          {
+            "amount": "50000",
+            "denom": "uscrt"
+          }
+        ],
+        "gas": "10000"
+      },
+      "memo": "",
+      "msgs": [
+        {
+          "type": "cosmos-sdk/MsgVote",
+          "value": {
+            "option": "2",
+            "proposal_id": "113",
+            "voter":"secret1q0rth4fu4svxnw63vjd7w74nadzsdp0f23e0uy"
+          }
+        }
+      ],
+      "sequence": "1"
+    },
+    "parsingErr": "No error",
+    "validationErr": "No error",
+    "expected": [
+      "0 | Type : Vote",
+      "1 | Option : Abstain",
+      "2 | Proposal ID : 113",
+      "3 | Voter [1/2] : secret1q0rth4fu4svxnw63vjd7w74nadzsdp0f",
+      "3 | Voter [2/2] : 23e0uy",
+      "4 | Fee : 0.050000 SCRT"
+    ],
+    "expert": false
   }
 ]
