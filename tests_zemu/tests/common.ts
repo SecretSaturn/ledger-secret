@@ -1,5 +1,5 @@
 /** ******************************************************************************
- *  (c) 2021-2022 Zondax GmbH
+ *  (c) 2021-2023 Zondax AG
  *
  *  Licensed under the Apache License, Version 2.0 (the "License");
  *  you may not use this file except in compliance with the License.
@@ -13,8 +13,7 @@
  *  See the License for the specific language governing permissions and
  *  limitations under the License.
  ******************************************************************************* */
-import { DEFAULT_START_OPTIONS, DeviceModel } from '@zondax/zemu'
-import {DEFAULT_KEY_DELAY} from "@zondax/zemu/src/constants";
+import { DEFAULT_START_OPTIONS, IDeviceModel } from '@zondax/zemu'
 
 const Resolve = require('path').resolve
 
@@ -23,19 +22,20 @@ export const APP_SEED = 'equip will roof matter pink blind book anxiety banner e
 const APP_PATH_S = Resolve('../app/output/app_s.elf')
 const APP_PATH_X = Resolve('../app/output/app_x.elf')
 const APP_PATH_SP = Resolve('../app/output/app_s2.elf')
+const APP_PATH_ST = Resolve('../app/output/app_stax.elf')
 
-export const DEFAULT_OPTIONS = {
+export const defaultOptions = {
   ...DEFAULT_START_OPTIONS,
   logging: true,
   custom: `-s "${APP_SEED}"`,
-  pressDelay: 1500,
   X11: false,
 }
 
-export const DEVICE_MODELS: DeviceModel[] = [
+export const DEVICE_MODELS: IDeviceModel[] = [
   { name: 'nanos', prefix: 'S', path: APP_PATH_S },
   { name: 'nanox', prefix: 'X', path: APP_PATH_X },
   { name: 'nanosp', prefix: 'SP', path: APP_PATH_SP },
+  { name: 'stax', prefix: 'ST', path: APP_PATH_ST },
 ]
 
 export const example_tx_str_basic = {
@@ -239,4 +239,30 @@ export const ibc_denoms = {
     }
   ],
   sequence: '1'
+}
+
+export const votingOptions = {
+  account_number: "0",
+    chain_id: "secret-4",
+    fee: {
+      amount: [
+        {
+          amount: "50000",
+          denom: "uscrt"
+        }
+      ],
+      gas: "10000"
+    },
+    memo: "",
+    msgs: [
+      {
+        type: "cosmos-sdk/MsgVote",
+        value: {
+          option: "2",
+          proposal_id: "113",
+          voter:"secret1q0rth4fu4svxnw63vjd7w74nadzsdp0f23e0uy"
+        }
+      }
+    ],
+    sequence: "1"
 }

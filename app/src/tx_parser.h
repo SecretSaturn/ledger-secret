@@ -1,7 +1,5 @@
-#pragma clang diagnostic push
-#pragma ide diagnostic ignored "modernize-deprecated-headers"
 /*******************************************************************************
-*   (c) 2018, 2019 Zondax GmbH
+*   (c) 2018 - 2023 Zondax AG
 *
 *  Licensed under the Apache License, Version 2.0 (the "License");
 *  you may not use this file except in compliance with the License.
@@ -15,8 +13,12 @@
 *  See the License for the specific language governing permissions and
 *  limitations under the License.
 ********************************************************************************/
-
 #pragma once
+
+#ifdef __cplusplus
+#pragma clang diagnostic push
+#pragma ide diagnostic ignored "modernize-deprecated-headers"
+#endif
 
 #include "json/json_parser.h"
 #include <stdint.h>
@@ -28,6 +30,8 @@ extern "C" {
 #endif
 
 #define MAX_RECURSION_DEPTH  6
+#define MULTISEND_KEY_IDX    9
+extern bool extraDepthLevel;
 
 #define INIT_QUERY_CONTEXT(_KEY, _KEY_LEN, _VAL, _VAL_LEN, _PAGE_IDX, _MAX_LEVEL) \
     parser_tx_obj.query._item_index_current = 0; \
@@ -64,6 +68,6 @@ __Z_INLINE bool is_msg_from_field(char *field_name) {
 
 #ifdef __cplusplus
 }
+#pragma clang diagnostic pop
 #endif
 
-#pragma clang diagnostic pop

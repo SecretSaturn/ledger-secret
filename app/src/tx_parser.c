@@ -1,7 +1,5 @@
-#pragma clang diagnostic push
-#pragma ide diagnostic ignored "misc-no-recursion"
 /*******************************************************************************
-*   (c) 2018, 2019 Zondax GmbH
+*   (c) 2018 - 2023 Zondax AG
 *
 *  Licensed under the Apache License, Version 2.0 (the "License");
 *  you may not use this file except in compliance with the License.
@@ -15,12 +13,18 @@
 *  See the License for the specific language governing permissions and
 *  limitations under the License.
 ********************************************************************************/
+#ifdef __cplusplus
+#pragma clang diagnostic push
+#pragma ide diagnostic ignored "misc-no-recursion"
+#endif
 
 #include <jsmn.h>
 #include "tx_parser.h"
 #include "zxmacros.h"
 #include "zxformat.h"
 #include "parser_impl.h"
+
+bool extraDepthLevel = false;
 
 // strcat but source does not need to be terminated (a chunk from a bigger string is concatenated)
 // dst_max is measured in bytes including the space for NULL termination
@@ -60,9 +64,13 @@ static const key_subst_t value_substitutions[] = {
         {"cosmos-sdk/MsgVote",                     "Vote"},
         {"cosmos-sdk/MsgWithdrawDelegationReward", "Withdraw Reward"},
         {"cosmos-sdk/MsgWithdrawValidatorCommission", "Withdraw Val. Commission"},
+        {"cosmos-sdk/MsgMultiSend",                   "Multi Send"},
         {"cosmos-sdk/MsgTransfer",                    "IBC Transfer"},
-        {"wasm/MsgExecuteContract",                   "Execute Encrypted Wasm Contract"},
-        {"query_permit",                              "Query Permit"},
+        {"cosmos-sdk/MsgGrant",                    "Grant Authorization"},
+        {"wasm/MsgExecuteContract",                "Execute Encrypted Wasm Contract"},
+        {"query_permit",                           "Query Permit"},
+        {"sign/MsgSignData",                       "Sign Data"},
+
 };
 
 parser_error_t tx_getToken(uint16_t token_index,
@@ -90,6 +98,9 @@ parser_error_t tx_getToken(uint16_t token_index,
             if (inLen == substStrLen && !MEMCMP(inValue, substStr, substStrLen)) {
                 inValue = value_substitutions[i].str2;
                 inLen = strlen(value_substitutions[i].str2);
+
+                //Extra Depth level for Multisend type
+                extraDepthLevel = (i == MULTISEND_KEY_IDX);
                 break;
             }
         }
@@ -246,4 +257,6 @@ parser_error_t tx_traverse_find(uint16_t root_token_index, uint16_t *ret_value_t
     return parser_query_no_results;
 }
 
+#ifdef __cplusplus
 #pragma clang diagnostic pop
+#endif
