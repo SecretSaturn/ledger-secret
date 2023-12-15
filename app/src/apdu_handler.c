@@ -80,6 +80,10 @@ __Z_INLINE uint8_t extractHRP(uint32_t rx, uint32_t offset) {
 }
 
 __Z_INLINE void extractHDPath(uint32_t rx, uint32_t offset) {
+    if (rx < offset + 1) {
+        THROW(APDU_CODE_DATA_INVALID);
+    }
+
     if ((rx - offset) < sizeof(uint32_t) * HDPATH_LEN_DEFAULT) {
         THROW(APDU_CODE_WRONG_LENGTH);
     }

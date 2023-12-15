@@ -73,15 +73,7 @@ catch_cx_error:
 __Z_INLINE zxerr_t compressPubkey(const uint8_t *pubkey, uint16_t pubkeyLen, uint8_t *output, uint16_t outputLen) {
     if (pubkey == NULL || output == NULL ||
         pubkeyLen != PK_LEN_SECP256K1_UNCOMPRESSED || outputLen < PK_LEN_SECP256K1) {
-            return zxerr_unknown;
-    }
-
-    // Format pubkey
-    for (int i = 0; i < 32; i++) {
-        output[i] = pubkey[64 - i];
-    }
-    if ((pubkey[32] & 1) != 0) {
-        output[31] |= 0x80;
+            return zxerr_invalid_crypto_settings;
     }
 
     MEMCPY(output, pubkey, PK_LEN_SECP256K1);
