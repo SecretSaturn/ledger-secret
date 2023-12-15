@@ -167,7 +167,7 @@ catch_cx_error:
 void ripemd160_32(uint8_t *out, uint8_t *in) {
     cx_ripemd160_t rip160;
     cx_ripemd160_init(&rip160);
-    CATCH_CXERROR(cx_hash_no_throw(&rip160.header, CX_LAST, in, CX_SHA256_SIZE, out, CX_RIPEMD160_SIZE));
+    CX_THROW(cx_hash_no_throw(&rip160.header, CX_LAST, in, CX_SHA256_SIZE, out, CX_RIPEMD160_SIZE));
 }
 
 zxerr_t crypto_fillAddress(uint8_t *buffer, uint16_t buffer_len, uint16_t *addrResponseLen) {
@@ -198,7 +198,7 @@ zxerr_t crypto_fillAddress(uint8_t *buffer, uint16_t buffer_len, uint16_t *addrR
             if (cx_keccak_init_no_throw(&ctx, 256) != CX_OK) {
                 return zxerr_unknown;
             }
-            CATCH_CXERROR(cx_hash_no_throw((cx_hash_t *)&ctx, CX_LAST, uncompressedPubkey+1, sizeof(uncompressedPubkey)-1, hashed1_pk, sizeof(hashed1_pk)));
+            CX_THROW(cx_hash_no_throw((cx_hash_t *)&ctx, CX_LAST, uncompressedPubkey+1, sizeof(uncompressedPubkey)-1, hashed1_pk, sizeof(hashed1_pk)));
             CHECK_ZXERR(bech32EncodeFromBytes(addr, buffer_len - PK_LEN_SECP256K1, bech32_hrp, hashed1_pk + 12, sizeof(hashed1_pk) - 12, 1, BECH32_ENCODING_BECH32))
             break;
         }
