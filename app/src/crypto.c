@@ -29,7 +29,7 @@ uint32_t hdPath[HDPATH_LEN_DEFAULT];
 
 uint8_t bech32_hrp_len;
 char bech32_hrp[MAX_BECH32_HRP_LEN + 1];
-address_encoding_e encoding = BECH32_COSMOS;
+address_encoding_e encoding;
 
 #include "cx.h"
 
